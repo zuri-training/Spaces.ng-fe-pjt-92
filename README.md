@@ -1,6 +1,7 @@
 # Spaces.ng-fe-pjt-92
 About Spaces.ng Spaces.NG is an application aimed at helping people find an efficient and reliable-working space around their location. Users (registered or not) can sign up on it and search for the closest spaces around them. They will also be able to view the available features/amenities of each workspace and its pricing. The application will offer a wealth of advantages for self-starters, including networking opportunities, inspiration or mentorship, wellness and enjoyment of personal space with professional engagement.
 
+<<<<<<< HEAD
 Contribution guide
 
 1.Fork the repository
@@ -13,3 +14,6 @@ Contribution guide
 8.To make sure there are no conflicts: git pull upstream develop
 9.Push changes to your new branch: git push origin your-current-branch-name
 10.Create a pull request to the develop branch
+=======
+
+>>>>>>> 188d4699f01328665b048eabed521cfa4f53b62d
