@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --background-color:rgb(65, 16, 110);
+    --interface-color:rgba(255, 255, 255, 0.856);
+    --error-message:red;
+    --success-message:rgb(84, 209, 84);
+    --border-radius:4px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+}
+.container{
+   
+}
+.login__form{
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: var(--interface-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.form__title{
+    margin-bottom:2rem;
+    text-align: center;
+}
+.form__text{
+  text-align: center;
+}
+.form> *:first-child{
+    margin-top: 0;
+}
+.form> *:last-child{
+    margin-bottom: 0;
+}
+.form__input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    outline: none;
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+    background: rgb(248, 248, 248);
+    transition: background 0.2s border-color 0.2s;
+    /* font-size: 16px; */
+}
+.form__input:focus{
+ border-color: var(--background-color);
+ background: #fff;
+}
+.form__message{
+    text-align: center;
+    margin-bottom: .2rem;
+    
+}
+.error__message{
+    color: var(--error-message);
+}
+.success__messsage{
+    color: var(--success-message);
+}
+.input__section{
+    position: relative;
+}
+.hide__password{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.login__btn{
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    outline: none;
+    border: none;
+    background-color: var(--background-color);
+    color: #fff;
+    cursor: pointer;
+}
+.link__text, a{
+    color: #fff;
+    margin-top: 1rem;
+}
+a{
+    text-decoration: none;
+    font-weight: 600;
+}
+a:hover{
+    text-decoration: underline;
+}
