@@ -249,16 +249,15 @@ section {
   }
 
   .testimonies__text {
-    margin-top: -2rem;
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    margin-right: 5rem;
+    max-width: 400px;
     font-size: 12px;
     font-style: normal;
   }
 
-  .testimonies__image > img {
-    width: fit-content;
+  .testimonies__image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
   }
 }
 
