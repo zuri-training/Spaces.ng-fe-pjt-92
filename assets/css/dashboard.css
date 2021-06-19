@@ -302,6 +302,9 @@ label::after,
 .aside-item-title::after {
   top: 40%;
 }
+.aside-item-title::after {
+  opacity: 0;
+}
 .form-item,
 #submit {
   width: 20%;
@@ -612,6 +615,9 @@ footer ul.social li:hover {
   .facilities,
   .attendees {
     margin: 0;
+  }
+  .aside-item-title::after {
+    opacity: 1;
   }
   .aside-form,
   .space-filters {
