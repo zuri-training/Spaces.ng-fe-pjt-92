@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+
+    <title>Find A Space That Suits You | Spaces.NG</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header-components">
+        <header>
+          <div class="logo">
+            <p class="logo-name"><a href="#"> Spaces.NG</a></p>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#"> About Us</li></a>
+              <li><a href="#"> Pricing</li></a>
+              <li><a href="#"> Contact Us</li></a>
+              <button class="register-btn"><a href="#">Do you have a space?</a></button>
+              <button><a href="#">Sign in</a></button>
+            </ul>
+          </nav>
+          <div id="menu-icon">
+            <div class="bar" id="bars" onclick="lockScroll();"></div>
+          </div>
+        </header>
+        <div id = "mobile-nav">
+          <ul id="mobile-nav-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Register a Space</a></li>
+            <li><a href="#">Find a Space</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">
+              <span class="state">Lagos</span> (
+              <span class="number-found-state">100</span> )</a>
+            </li>
+            <li><a href="#">
+              Workspaces in <span class="city">Ikeja</span> (
+              <span class="number-found-city">10</span> )</a>
+            </li>
+          </ul>
+        </div>
+        <form action="">
+          <div class="country form-item">
+            <label>Select a Country</label>
+            <select name="Select a Country" id="country">
+              <option value="Nigeria">Nigeria</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Togo">Togo</option>
+            </select>
+          </div>
+          <div class="state form-item">
+            <label>Select a State</label>
+            <select name="Select a State" id="state">
+              <option value="Lagos">Lagos</option>
+              <option value="Abuja">Abuja</option>
+              <option value="Enugu">Enugu</option>
+            </select>
+          </div>
+          <div class="city form-item">
+            <label>Select a City</label>
+            <select name="Select a City" id="city">
+              <option value="Ikeja">Ikeja</option>
+              <option value="Ikoyi">Ikoyi</option>
+              <option value="Magodo">Magodo</option>
+            </select>
+          </div>
+          <button id="submit"><a href="dashboard2.html">Find Space</a></button>
+        </form>
+        <div class="page-title">
+          <h1>
+            Workspaces in <span class="city">Ikeja</span>,<br />
+            <span class="state">Lagos</span> State
+          </h1>
+        </div>
+        <div class="main-body">
+          <section class="aside">
+            <div class="aside-form">
+              <div class="aside-form-item">
+                <h3>Country</h3>
+                <select name="country" id="country">
+                  <option value="Nigeria">Nigeria</option>
+                </select>
+                <span class="custom-arrow"></span>
+              </div>
+              <div class="aside-form-item">
+                <h3>State</h3>
+                <select name="state" id="state">
+                  <option value="Lagos">Lagos</option>
+                </select>
+              </div>
+              <div class="aside-form-item">
+                <h3>City</h3>
+                <select name="city" id="city">
+                  <option value="Ikeja">Ikeja</option>
+                </select>
+              </div>  
+            </div>
+            <div class="space-filters">
+              <div class="facilities space-filters-item">
+                <h3 class="aside-item-title">Facilities</h3>
+                <div class="filter-wrap close-filter">
+                  <div class="facilities-item">
+                    <p>Parking</p>
+                    <input type="checkbox" name="parking" id="parking" />
+                  </div>
+                  <div class="facilities-item">
+                    <p>Wi-Fi</p>
+                    <input type="checkbox" name="wi-fi" id="wi-fi" />
+                  </div>
+                  <div class="facilities-item">
+                    <p>Whiteboard</p>
+                    <input type="checkbox" name="whiteboard" id="whiteboard" />
+                  </div>
+                  <div class="facilities-item">
+                    <p>Flat Screen</p>
+                    <input type="checkbox" name="flat screen" id="flat-screen" />
+                  </div>
+                </div>
+              </div>
+              <div class="attendees space-filters-item">
+                <h3 class="aside-item-title">Attendees</h3>
+                <div class="filter-wrap close-filter">
+                  <div class="attendees-item">
+                    <p>Any</p>
+                    <input type="checkbox" name="any" id="any" />
+                  </div>
+                  <div class="attendees-item">
+                    <p>0-5</p>
+                    <input type="checkbox" name="below five" id="below-five" />
+                  </div>
+                  <div class="attendees-item">
+                    <p>5-10</p>
+                    <input type="checkbox" name="five to ten" id="five-to-ten" />
+                  </div>
+                  <div class="attendees-item">
+                    <p>10-14</p>
+                    <input
+                      type="checkbox"
+                      name="ten to twenty"
+                      id="ten-to-twenty"
+                    />
+                  </div>
+                  <div class="attendees-item">
+                    <p>15-19</p>
+                    <input
+                      type="checkbox"
+                      name="ten to twenty"
+                      id="ten-to-twenty"
+                    />
+                  </div>
+                  <div class="attendees-item">
+                    <p>20-29</p>
+                    <input
+                      type="checkbox"
+                      name="ten to twenty"
+                      id="ten-to-twenty"
+                    />
+                  </div>
+                  <div class="attendees-item">
+                    <p>30+</p>
+                    <input
+                      type="checkbox"
+                      name="ten to twenty"
+                      id="ten-to-twenty"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="results">
+            <div class="first">
+              <p class="first-line">
+                Spaces in <span class="city">Ikeja</span>,
+                <span class="state">Lagos</span> State
+              </p>
+              <div class="sort">
+                <p>Sort by:</p>
+                <select name="Most liked" id="sort">
+                  <option value="Most Liked">Most Liked</option>
+                  <option value="Least Liked">Least Liked</option>
+                  <option value="Rating: High to Low">
+                    Rating: High to Low
+                  </option>
+                  <option value="Rating: Low to High">
+                    Rating: Low to High
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div class="second">
+              <p>
+                <span class="spaces-found">10</span> Spaces found.
+              </p>
+            </div>
+            <div class="spaces-wrap">
+              <div class="spaces-item">
+                <img src="assets/img/hub-one.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Hub One</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.3</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/normadians.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Normadians</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.3</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/vibranium-valley.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Vibranium Valley</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.0</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/work-central.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Work Central</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.0</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/lead-space.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Lead Space</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.4</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/cube-hub.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Cube Hub</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.2</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/work-bay.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Work Bay</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.0</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/redahlia.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Redahlia Workspaces</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.4</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/wennovation.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">Wennovation Hub</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.0</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="spaces-item">
+                <img src="assets/img/african-hub.png" alt="" />
+                <div class="space-item-text">
+                  <p class="space-name">African Hub</p>
+                  <p class="space-item-location">
+                    <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                  </p>
+                </div>
+                <div class="like-icon"><i class="far fa-heart"></i></div>
+                <div class="ratings">
+                  <p class="rating-value">4.4</p>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="footer-component">
+        <footer>
+          <div class="footer-wrap">
+            <div class="logo">
+              <p class="logo-name">Spaces.NG</p>
+            </div>
+            <div class="site-links">
+              <h3>Site Links</h3>
+              <ul>
+                <li>About Us</li>
+                <li>Pricing</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+            <div class="legal">
+              <h3>Legal</h3>
+              <ul>
+                <li>Terms & conditions</li>
+                <li>License Agreement</li>
+                <li>Privacy Policy</li>
+                <li>Copyright Information</li>
+                <li>Cookies Policy</li>
+              </ul>       
+            </div>
+            <div>
+              <h3>Social Links</h3>
+              <ul class="social">
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <div class="pjt-92">
+          <p>Designed by PJT-92 Team</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+  </body>
+</html>
