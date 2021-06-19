@@ -267,7 +267,7 @@ footer ul.social {
   justify-content: center;
 }
 footer ul.social li {
-  margin-right: 20px;
+  margin: 0 20px 0 0;
   font-size: 24px;
   color: white;
   font-weight: normal;
@@ -309,7 +309,7 @@ footer ul.social li:hover {
   }
   /* footer */
   footer {
-    padding: 30px;
+    padding: 20px;
   }
 }
 
