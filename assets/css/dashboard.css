@@ -61,6 +61,7 @@ header {
   font-weight: bold;
   font-family: "roboto";
   letter-spacing: 2px;
+  cursor: pointer;
 }
 nav ul {
   display: flex;
