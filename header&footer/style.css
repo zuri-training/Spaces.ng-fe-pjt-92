@@ -63,6 +63,7 @@ header {
   font-weight: bold;
   font-family: "roboto";
   letter-spacing: 2px;
+  cursor: pointer;
 }
 nav ul {
   display: flex;
@@ -226,14 +227,13 @@ nav ul button {
 
 footer {
   background-color: #1a027b;
-
   color: white;
   padding: 50px;
   font-family: "roboto";
   font-size: 16px;
 }
 .footer-wrap {
-  max-width: 1700px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -243,7 +243,7 @@ footer .logo p {
 }
 footer h3 {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   margin: 0 0 16px;
 }
 footer ul {
@@ -278,7 +278,7 @@ footer ul.social li:hover {
 }
 .pjt-92 {
   background-color: #1a027b;
-  height: 80px;
+  height: 60px;
   text-align: center;
   display: flex;
   justify-content: center;
