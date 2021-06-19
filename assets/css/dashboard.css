@@ -41,16 +41,20 @@ img {
   display: block;
   object-fit: cover;
 }
+.header-components {
+  background-color: #4623d2;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   color: white;
-  background-color: #4623d2;
   padding: 0 50px 0 30px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
   z-index: 10;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .logo-name {
   font-size: 28px;
@@ -216,7 +220,7 @@ nav ul button {
 
 .main {
   width: 95%;
-  max-width: 1700px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 /* BREADCRUMB STYLES */
@@ -399,8 +403,11 @@ section.results {
   font-size: 18px;
   font-weight: bold;
   font-family: "raleway";
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   border-bottom: 1px solid #c6c6ca;
+}
+.results .second {
+  font-weight: normal;
 }
 .first-line {
   margin: 0;
@@ -435,7 +442,7 @@ section.results {
   flex-wrap: wrap;
 }
 .spaces-item {
-  width: 46%;
+  width: 45%;
   min-width: 300px;
   max-width: 400px;
   height: 350px;
@@ -443,7 +450,7 @@ section.results {
   position: relative;
   color: white;
   border-radius: 10px;
-  margin: 0 10px 50px;
+  margin: 0 0 50px;
   box-shadow: 5px 5px 10px rgba(75, 87, 87, 0.5);
 }
 .spaces-item:after {
@@ -523,14 +530,13 @@ section.results {
 /* FOOTER STYLES */
 footer {
   background-color: #1a027b;
-
   color: white;
   padding: 50px;
   font-family: "roboto";
   font-size: 16px;
 }
 .footer-wrap {
-  max-width: 1700px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -540,7 +546,7 @@ footer .logo p {
 }
 footer h3 {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   margin: 0 0 16px;
 }
 footer ul {
@@ -575,7 +581,7 @@ footer ul.social li:hover {
 }
 .pjt-92 {
   background-color: #1a027b;
-  height: 80px;
+  height: 60px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -729,6 +735,7 @@ footer ul.social li:hover {
   }
   .spaces-item {
     width: 90%;
+    margin: 0 auto 20px;
     height: 350px;
     min-width: 250px;
   }
