@@ -740,15 +740,30 @@ footer ul.social li:hover {
     height: 350px;
     min-width: 250px;
   }
+  footer {
+    display: flex;
+    justify-content: center;
+  }
   .footer-wrap {
     font-size: 14px;
     flex-direction: column;
+    text-align: center;
+  }
+  footer .logo-name {
+    text-align: center;
   }
   footer h3 {
     font-size: 16px;
   }
   footer ul.social {
-    justify-content: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    margin: 0 auto;
+  }
+  footer ul.social li {
+    margin: 0;
   }
   .pjt-92 {
     font-size: 14px;
