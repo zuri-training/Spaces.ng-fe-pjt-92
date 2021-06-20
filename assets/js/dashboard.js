@@ -42,7 +42,23 @@ for (i = 0; i < asideItem.length; i++){
 
 // SPACE-ITEM LIKE ICON
 
+const spacesItem = document.querySelectorAll('.spaces-item')
 
+function likeBtn (){
+    [...spacesItem].forEach((item) => {
+        let like = item.children[2]
+        like.addEventListener('click', () => {
+            if (like.innerHTML === '<i class="far fa-heart"></i>'){
+                like.innerHTML = '<i class="fas fa-heart liked"></i>';
+            }
+            else if (like.innerHTML === '<i class="fas fa-heart liked"></i>'){
+                like.innerHTML = '<i class="far fa-heart"></i>';
+            }
+
+        })
+    })    
+}
+likeBtn();
 
 
 

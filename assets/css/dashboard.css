@@ -503,6 +503,9 @@ section.results {
   font-size: 32px;
   cursor: pointer;
 }
+.liked {
+  color: rgb(255, 0, 0);
+}
 .spaces-item .ratings {
   position: absolute;
   bottom: 15px;
