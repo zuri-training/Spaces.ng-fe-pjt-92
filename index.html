@@ -5,41 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Lora:400,700|Roboto+Slab:400,700&
-     display=swap"
-      rel="stylesheet"
-    />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Spaces.NG</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <h2>Spaces.NG</h2>
-      </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
-          <li class="nav__item">
-            <a href="#" class="nav__link">Contact Us</a>
-          </li>
-          <li class="nav__item__aside">
-            <a href="#" class="nav__link__aside">Do you have a space?</a>
-          </li>
+    <div class="header-components">
+      <header>
+        <div class="logo">
+          <p class="logo-name"><a href="#"> Spaces.NG</a></p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#"> About Us</li></a>
+            <li><a href="#"> Pricing</li></a>
+            <li><a href="#"> Contact Us</li></a>
+            <button class="register-btn"><a href="#">Do you have a space?</a></button>
+            <button><a href="#">Sign in</a></button>
+          </ul>
+        </nav>
+        <div id="menu-icon">
+          <div class="bar" id="bars" onclick="lockScroll();"></div>
+        </div>
+      </header>
+      <div id = "mobile-nav">
+        <ul id="mobile-nav-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Register a Space</a></li>
+          <li><a href="#">Find a Space</a></li>
         </ul>
-      </nav>
-
-      <button class="signin__btn">Sign In</button>
-    </header>
+      </div>
+  </div>
 
     <section class="intro" id="home">
       <div class="intro__container">
@@ -49,8 +47,8 @@
         </h3>
         <button class="intro__btn">
           <a href="#">
-            Find Space Now
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            Find Space Now         
+            <i class="fas fa-long-arrow-alt-right"></i>
           </a>
         </button>
       </div>
@@ -128,7 +126,7 @@
             <img
               src="/assets/img/office1.jpg"
               alt=""
-              class="testimonies__image"
+              
             />
           </div>
           <div class="testimonies__text">
@@ -148,7 +146,7 @@
             <img
               src="/assets/img/office2.jpg"
               alt=""
-              class="testimonies__image"
+              
             />
           </div>
           <div class="testimonies__text">
@@ -169,7 +167,7 @@
             <img
               src="/assets/img/office3.jpg"
               alt=""
-              class="testimonies__image"
+              
             />
           </div>
           <div class="testimonies__text">
@@ -187,69 +185,45 @@
         </div>
       </div>
     </section>
-    <section class="footer">
-      <div class="footer__logo">
-        <h3 class="footer__logo__image">Spaces.NG</h3>
+    <div class="footer-component">
+      <footer>
+        <div class="footer-wrap">
+          <div class="logo">
+            <p class="logo-name">Spaces.NG</p>
+          </div>
+          <div class="site-links">
+            <h3>Site Links</h3>
+            <ul>
+              <li>About Us</li>
+              <li>Pricing</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div class="legal">
+            <h3>Legal</h3>
+            <ul>
+              <li>Terms & conditions</li>
+              <li>License Agreement</li>
+              <li>Privacy Policy</li>
+              <li>Copyright Information</li>
+              <li>Cookies Policy</li>
+            </ul>       
+          </div>
+          <div>
+            <h3>Social Links</h3>
+            <ul class="social">
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-facebook"></i></li>
+              <li><i class="fab fa-twitter"></i></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="pjt-92">
+        <p>Designed by PJT-92 Team</p>
       </div>
-      <div class="footer__links">
-        <h4 class="footer__links__header">Site Links</h4>
-        <ul class="footer__list">
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">About</a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">Pricing</a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__links">
-        <h4 class="footer__links__header">Legal</h4>
-        <ul class="footer__list">
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">Terms & conditions</a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">License Agreement</a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">Privacy Policy</a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">Copyright information</a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">Cookies Policy</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__links">
-        <h4 class="footer__links__header">Social Links</h4>
-        <ul class="footer__list__social">
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link"
-              ><i class="fa fa-instagram fa 2x" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link"
-              ><i class="fa fa-facebook-official" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li class="footer__list__item">
-            <a href="#" class="footer__list__link">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="footer__border">
-      <div class="footer__pj92">
-        <p class="footer__pj92__decs">Designed by PJT-92 Team</p>
-      </div>
-    </section>
+  </div>
+    
+    <script src="/assets/js/index.js"></script>
   </body>
 </html>
