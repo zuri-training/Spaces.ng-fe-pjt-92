@@ -7,28 +7,53 @@
     <title>LogIn</title>
     <script src="https://kit.fontawesome.com/7cbbed23cb.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <div class="container">
-        <form action="" class="login__form" id="login">
-            <h1 class="form__title">Login to your account</h1>
-            <div class="input__section">
-                <div class="form__message error__message">Incorrect input</div>
-                <input type="text" class="form__input" autofocus placeholder="Email address">
+        <form action="" class="login__form" id="login" name="form">
+            <h1 class="form__title">Welcome Back</h1>
+            <p class="sign__in">Please sign in</p>
+
+            <div class="envelope-icon input__section">
+                <i id="email_icon" class="envelope icon fas fa-envelope"></i>
+                <input type="text" name='email' class="form__input email" autofocus placeholder="Email address">
+                <i class="email_check fas fa-check-circle"></i>
+                <i class="email_exclamation fas fa-exclamation-circle"></i>
+                <div class="form__message email__error">Please fill up your email</div>
             </div>
-            <div class="input__section">
-                <div class="form__message error__message">Incorrect input</div>
-                <input type="password" class="form__input" autofocus placeholder="Password">
-                <i class="hide__password fas fa-eye-slash"></i>
+            <div class="pas-lock input__section">
+                <i id="pas_icon" class="lock icon fas fa-lock" aria-hi></i>
+                <input type="password" name='password' class="form__input password" autofocus placeholder="Password">
+                <i class="password_check fas fa-check-circle"></i>
+                <i class="password_exclamation fas fa-exclamation-circle"></i>
+                <div class="form__message password__error">Please fill up your password</div>
             </div>
+            <div class="forgotten__pass">
+                <div class="">
+                    <input type="checkbox" name="" id=""> 
+                    <label for="">Keep me signed in</label>
+                </div>
+               
+                <a href="#">Forgot Password</a>
+            </div>
+
             <button class="login__btn">Login</button>
+            <div class="form__text">
+                <p class="link__text">Don't have an account yet?  
+                <a href="#">Sign up</a>
+                </p>
+            </div>
         </form>
-        <div class="form__text">
-            <p class="link__text">Don't have an account? <a href="#">Register</a></p>
-            <p class="link__text">Forgotten password? <a href="#">Recover Password</a></p>
+
+        <div class="image__container">
+            <!-- <img src="./images/image 1.png" alt="" class="image" srcset=""> -->
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
