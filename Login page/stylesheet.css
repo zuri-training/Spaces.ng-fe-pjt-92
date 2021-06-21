@@ -130,6 +130,11 @@ i{
     color: #fff;
     cursor: pointer;
 }
+.login__btn:hover{
+    background: #270f8a;
+    /* color: var(--interface-color); */
+    transition: background 1s;
+}
 
 
 .link__text{
@@ -152,7 +157,7 @@ a:hover{
         z-index:2;
         padding: 2rem;
         opacity: .7;
-        box-shadow: 3.2px 16px 40px 2px rgba(96, 57, 251, 0.3);
+        /* box-shadow: 3.2px 16px 40px 2px rgba(96, 57, 251, 0.3); */
 
     }
 }
@@ -182,6 +187,9 @@ a:hover{
         opacity: .7;
         box-shadow: 3.2px 16px 40px 2px rgba(96, 57, 251, 0.3);
         padding: 0.7rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     } 
     .form__input{
         padding: 0.5rem 3rem;
