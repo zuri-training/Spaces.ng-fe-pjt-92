@@ -79,9 +79,11 @@ header {
 }
 .user {
   height: 45px;
-  margin: 0 20px 10px;
+  margin: 0 20px;
   position: relative;
-  padding: 10px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .user i {
   font-size: 40px;
@@ -95,7 +97,7 @@ ul.dropdown li {
   font-size: 16px;
   color: black;
   padding: 15px;
-  width: 100px;
+  width: 120px;
   background-color: white;
   font-weight: bold;
   text-align: center;
@@ -107,8 +109,8 @@ ul.dropdown li:last-child {
   display: block;
   position: absolute;
   top: 0;
-  padding-top: 10px;
-  margin-top: 50px;
+  padding-top: 20px;
+  margin-top: 40px;
   z-index: 150;
 }
 .user:hover ul.dropdown li:hover {
@@ -380,6 +382,9 @@ footer ul.social li i:hover {
   footer {
     padding: 20px;
   }
+  .footer-wrap {
+    justify-content: space-between;
+  }
 }
 
 /* max-width: 760px */
@@ -390,6 +395,12 @@ footer ul.social li i:hover {
   }
   .logo-name {
     font-size: 20px;
+  }
+  .user i {
+    font-size: 30px;
+  }
+  .user:hover ul.dropdown {
+    margin-top: 30px;
   }
   /* footer */
   .footer-wrap {
@@ -409,7 +420,11 @@ footer ul.social li i:hover {
   footer ul.social li {
     margin: 0;
   }
-  .pjt-92 {
+  footer ul.social li i {
+    font-size: 24px;
+  }
+  .pjt-92,
+  footer .contact p {
     font-size: 14px;
   }
 }
