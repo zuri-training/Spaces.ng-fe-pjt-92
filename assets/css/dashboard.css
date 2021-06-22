@@ -523,6 +523,7 @@ section.results {
 }
 .ratings i {
   font-size: 20px;
+  color: gold;
 }
 .rating-value {
   margin: 0 0 10px;
@@ -545,8 +546,22 @@ footer {
   display: flex;
   justify-content: space-around;
 }
-footer .logo p {
+footer .footer-info p {
   margin: 0 0 20px;
+  font-weight: bold;
+}
+.footer-info i,
+footer ul li i {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: initial;
+}
+.bold-icon i {
+  font-weight: bold;
+}
+footer .contact p {
+  font-size: 16px;
+  color: #8396bb;
 }
 footer h3 {
   color: white;
@@ -564,16 +579,17 @@ footer ul li {
   font-weight: bold;
   color: #8396bb;
 }
-footer ul li:hover {
+footer ul li:hover,
+.contact .app:hover {
   color: white;
-  padding-left: 5px;
+  /* padding-left: 5px; */
 }
 footer ul.social {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-footer ul.social li {
+footer ul.social li i {
   margin: 0 20px 0 0;
   font-size: 24px;
   color: white;
