@@ -47,16 +47,24 @@ img {
   display: block;
   object-fit: cover;
 }
+.header-components {
+  background-color: #4623d2;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   color: white;
-  background-color: #4623d2;
-  padding: 0 50px 0 30px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  padding: 0 50px 0 40px;
   z-index: 10;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .logo-name {
   font-size: 28px;
@@ -64,6 +72,48 @@ header {
   font-family: "roboto";
   letter-spacing: 2px;
   cursor: pointer;
+}
+.nav-wrap {
+  display: flex;
+  align-items: center;
+}
+.user {
+  height: 45px;
+  margin: 0 20px 10px;
+  position: relative;
+  padding: 10px 10px 20px;
+}
+.user i {
+  font-size: 40px;
+}
+ul.dropdown {
+  cursor: pointer;
+  display: none;
+  /* background-color: red; */
+}
+ul.dropdown li {
+  font-size: 16px;
+  color: black;
+  padding: 15px;
+  width: 100px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+}
+ul.dropdown li:last-child {
+  border-top: 1px solid rgb(169, 181, 182);
+}
+.user:hover ul.dropdown {
+  display: block;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+  margin-top: 50px;
+  z-index: 150;
+}
+.user:hover ul.dropdown li:hover {
+  background-color: #4623d2;
+  color: white;
 }
 nav ul {
   display: flex;
@@ -76,6 +126,7 @@ nav ul * {
 }
 nav ul li {
   padding: 10px 0;
+  text-transform: uppercase;
 }
 nav ul *:hover {
   background-color: white;
@@ -160,7 +211,7 @@ nav ul button {
   height: 100vh;
   min-height: 400px;
   background-color: transparent;
-  z-index: 10;
+  z-index: 5;
   transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none;
@@ -238,8 +289,22 @@ footer {
   display: flex;
   justify-content: space-around;
 }
-footer .logo p {
+footer .footer-info p {
   margin: 0 0 20px;
+  font-weight: bold;
+}
+.footer-info i,
+footer ul li i {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: initial;
+}
+.bold-icon i {
+  font-weight: bold;
+}
+footer .contact p {
+  font-size: 16px;
+  color: #8396bb;
 }
 footer h3 {
   color: white;
@@ -259,20 +324,19 @@ footer ul li {
 }
 footer ul li:hover {
   color: white;
-  padding-left: 5px;
 }
 footer ul.social {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-footer ul.social li {
+footer ul.social li i {
   margin: 0 20px 0 0;
   font-size: 24px;
   color: white;
   font-weight: normal;
 }
-footer ul.social li:hover {
+footer ul.social li i:hover {
   padding: 0;
   color: #8396bb;
 }
@@ -289,6 +353,11 @@ footer ul.social li:hover {
 .pjt-92 p {
   margin: 0;
   color: #8396bb;
+}
+.pjt-92 p:hover {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 /* END OF FOOTER STYLES */
 
@@ -323,14 +392,9 @@ footer ul.social li:hover {
     font-size: 20px;
   }
   /* footer */
-  footer {
-    display: flex;
-    justify-content: center;
-  }
   .footer-wrap {
     font-size: 14px;
     flex-direction: column;
-    text-align: center;
   }
   footer .logo-name {
     text-align: center;
@@ -340,10 +404,7 @@ footer ul.social li:hover {
   }
   footer ul.social {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 120px;
-    margin: 0 auto;
+    justify-content: left;
   }
   footer ul.social li {
     margin: 0;

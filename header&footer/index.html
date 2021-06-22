@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/5d105b5d88.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
     <title>Header & Footer</title>
   </head>
   <body>
@@ -23,15 +25,23 @@
           <div class="logo">
             <p class="logo-name"><a href="index.html"> Spaces.NG</a></p>
           </div>
-          <nav>
-            <ul>
-              <li><a href="#"> About Us</li></a>
-              <li><a href="#"> Pricing</li></a>
-              <li><a href="#"> Contact Us</li></a>
-              <button class="register-btn"><a href="#">Do you have a space?</a></button>
-              <button><a href="#">Sign in</a></button>
-            </ul>
-          </nav>
+          <div class="nav-wrap">
+            <nav>
+              <ul>
+                <li><a href="#"> About Us</li></a>
+                <li><a href="#"> Contact Us</li></a>
+                <button class="register-btn"><a href="#">Do you have a space?</a></button>
+                <!-- <button><a href="#">Sign in</a></button> -->
+              </ul>
+            </nav>
+            <div class="user" id = "user">   
+              <i class="far fa-user-circle"></i>
+              <ul class="dropdown">
+                <li>Sign up</li>
+                <li>Sign in</li>
+              </ul>
+            </div>
+          </div>
           <div id="menu-icon">
             <div class="bar" id="bars" onclick="lockScroll();"></div>
           </div>
@@ -39,7 +49,6 @@
         <div id = "mobile-nav">
           <ul id="mobile-nav-links">
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Pricing</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Register a Space</a></li>
             <li><a href="#">Find a Space</a></li>
@@ -58,39 +67,46 @@
     -->
 
     <div class="footer-component">
-        <footer>
-          <div class="footer-wrap">
-            <div class="logo">
-              <p class="logo-name"><a href="index.html"> Spaces.NG</a></p>
+      <footer>
+        <div class="footer-wrap">
+          <div class="footer-info">
+            <p class="logo-name">Spaces.NG</p>
+            <!-- <p>Find a space that suits you</p> -->
+            <div class="contact">
+              <p><i class="fas fa-envelope"></i>spacesng@gmail.com</p>
+              <p class="bold-icon"><i class="fas fa-phone-alt"></i>08050040020</p>
+              <p class="app"><i class="fab fa-android"></i><a href=""> Download our Android app</a></p>
+            <p class="app"><i class="fab fa-apple"></i>Download our IOS app</p>
             </div>
-            <div class="site-links">
-              <h3>Site Links</h3>
-              <ul>
-                <li>About Us</li>
-                <li>Pricing</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-            <div class="legal">
-              <h3>Legal</h3>
-              <ul>
-                <li>Terms & conditions</li>
-                <li>License Agreement</li>
-                <li>Privacy Policy</li>
-                <li>Copyright Information</li>
-                <li>Cookies Policy</li>
-              </ul>       
-            </div>
-            <div>
-              <h3>Social Links</h3>
-              <ul class="social">
-                <li><i class="fab fa-instagram"></i></li>
-                <li><i class="fab fa-facebook"></i></li>
-                <li><i class="fab fa-twitter"></i></li>
-              </ul>
-            </div>
+            
           </div>
-        </footer>
+          <div class="site-links">
+            <h3>Site Links</h3>
+            <ul>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>About Us</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Contact Us</li>
+            </ul>
+          </div>
+          <div class="legal">
+            <h3>Legal</h3>
+            <ul>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Terms & conditions</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>License Agreement</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Privacy Policy</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Copyright Information</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Cookies Policy</li>
+            </ul>       
+          </div>
+          <div>
+            <h3>Social Links</h3>
+            <ul class="social">
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-facebook"></i></li>
+              <li><i class="fab fa-twitter"></i></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
         <div class="pjt-92">
           <p>Designed by PJT-92 Team</p>
         </div>
@@ -101,7 +117,7 @@
         THIS IS THE END OF THE FOOTER!!!
     -->
 
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
 
