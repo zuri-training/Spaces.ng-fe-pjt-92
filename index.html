@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-   
+    <!-- <link rel="stylesheet" href="assets/css/slick.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Spaces.NG</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <title>Welcome to Spaces.NG | Find a Space that suits you</title>
   </head>
   <body>
     <div class="header-components">
@@ -15,18 +16,27 @@
         <div class="logo">
           <p class="logo-name"><a href="#"> Spaces.NG</a></p>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#"> About Us</li></a>
-            <li><a href="#"> Contact Us</li></a>
-            <button class="register-btn"><a href="#">Do you have a space?</a></button>
-            <button><a href="#">Sign in</a></button>
-          </ul>
-        </nav>
-        <div id="menu-icon">
-          <div class="bar" id="bars" onclick="lockScroll();"></div>
-          <!-- <i class="far fa-user-circle"></i> -->
+        <div class="nav-wrap">
+          <nav>
+            <ul>
+              <li><a href="#"> About Us</li></a>
+              <li><a href="#"> Contact Us</li></a>
+              <button class="register-btn"><a href="#">Do you have a space?</a></button>
+            </ul>
+          </nav>
+          <div class="user" id = "user">   
+            <i class="far fa-user-circle"></i>
+            <ul class="dropdown">
+              <li>Sign up</li>
+              <li>Sign in</li>
+            </ul>
+          </div>
+          <div id="menu-icon">
+            <div class="bar" id="bars" onclick="lockScroll();"></div>
+            <!-- <i class="far fa-user-circle"></i> -->
+          </div>
         </div>
+        
       </header>
       <div id = "mobile-nav">
         <ul id="mobile-nav-links">
@@ -36,21 +46,41 @@
           <li><a href="#">Find a Space</a></li>
         </ul>
       </div>
-  </div>
-
+    </div>
     <section class="intro" id="home">
       <div class="intro__container">
         <h3 class="intro__heading">
           <span>Find</span> The Most Efficient and Reliable
           <span>Working</span> Space Near You.
         </h3>
-        <button class="intro__btn">
-          <a href="#">
-            Find Space Now         
-            <i class="fas fa-long-arrow-alt-right"></i>
-          </a>
-        </button>
       </div>
+      <form action="">
+        <div class="country form-item">
+          <label>Select a Country</label>
+          <select name="Select a Country" id="country">
+            <option value="Nigeria">Nigeria</option>
+          </select>
+        </div>
+        <div class="state form-item">
+          <label>Select a State</label>
+          <select name="Select a State" id="state">
+            <option value="">Select a state</option>
+            <option value="Lagos">Lagos</option>
+            <option value="Abuja">Abuja</option>
+            <option value="Enugu">Enugu</option>
+          </select>
+        </div>
+        <div class="city form-item">
+          <label>Select a City</label>
+          <select name="Select a City" id="city">
+            <option value="">Select a City</option>
+            <option value="Ikeja">Ikeja</option>
+            <option value="Ikoyi">Ikoyi</option>
+            <option value="Magodo">Magodo</option>
+          </select>
+        </div>
+        <button id="submit"><a href="dashboard2.html">Find Space</a></button>
+      </form>
     </section>
     <section class="intro__items">
       <div class="intro__item">
@@ -92,70 +122,79 @@
     <section class="featured__spaces">
       <h3>FEATURED SPACES</h3>
       <div class="featured__spaces__wrap">
-        <div class="spaces-item">
-          <img src="assets/img/hub-one.png" alt="" />
-          <div class="space-item-text">
-            <p class="space-name">Hub One</p>
-            <p class="space-item-location">
-              <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
-            </p>
-          </div>
-          <div class="ratings">
-            <p class="rating-value">4.8</p>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-        <div class="spaces-item">
-          <img src="assets/img/normadians.png" alt="" />
-          <div class="space-item-text">
-            <p class="space-name">Normadians</p>
-            <p class="space-item-location">
-              <i class="fas fa-map-marker-alt"></i> Abuja, Nigeria.
-            </p>
-          </div>
-          <div class="ratings">
-            <p class="rating-value">5.0</p>
-            <i class="fas fa-star"></i>
+        <div class="spaces-wrap">
+          <div class="spaces-item">
+            <img src="assets/img/hub-one.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Hub One</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">4.8</p>
+              <i class="fas fa-star"></i>
+            </div>
           </div>
         </div>
-        <div class="spaces-item">
-          <img src="assets/img/vibranium-valley.png" alt="" />
-          <div class="space-item-text">
-            <p class="space-name">Vibranium Valley</p>
-            <p class="space-item-location">
-              <i class="fas fa-map-marker-alt"></i> Ibadan, Nigeria.
-            </p>
-          </div>
-          <div class="ratings">
-            <p class="rating-value">5.0</p>
-            <i class="fas fa-star"></i>
-          </div>
-        </div>
-        <div class="spaces-item">
-          <img src="assets/img/work-central.png" alt="" />
-          <div class="space-item-text">
-            <p class="space-name">Work Central</p>
-            <p class="space-item-location">
-              <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
-            </p>
-          </div>
-          <div class="ratings">
-            <p class="rating-value">5.0</p>
-            <i class="fas fa-star"></i>
+        <div class="spaces-wrap">
+          <div class="spaces-item">
+            <img src="assets/img/normadians.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Bear Valley</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Abuja, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
           </div>
         </div>
-        <div class="spaces-item">
-          <img src="assets/img/lead-space.png" alt="" />
-          <div class="space-item-text">
-            <p class="space-name">Lead Space</p>
-            <p class="space-item-location">
-              <i class="fas fa-map-marker-alt"></i> Abuja, Nigeria.
-            </p>
+        <div class="spaces-wrap">
+          <div class="spaces-item">
+            <img src="assets/img/vibranium-valley.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Nuestreams Center</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Ibadan, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
           </div>
-          <div class="like-icon"><i class="far fa-heart"></i></div>
-          <div class="ratings">
-            <p class="rating-value">4.8</p>
-            <i class="fas fa-star"></i>
+        </div>
+        <div class="spaces-wrap">
+          <div class="spaces-item">
+            <img src="assets/img/work-central.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Work Central</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="spaces-wrap">
+          <div class="spaces-item">
+            <img src="assets/img/lead-space.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Lead Space</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Abuja, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">4.8</p>
+              <i class="fas fa-star"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -181,98 +220,108 @@
     <section class="testimonies">
       <h3 class="testimonies__heading">Testimonials</h3>
       <div class="testimonies__details">
-        <div class="testimonies__container">
-          <!-- <div class="testimonies__image">
-            <img
-              src="/assets/img/office1.jpg"
-              alt=""
-              
-            />
-          </div> -->
-          <div class="testimonies__text">
-            <p class="testimonies__text__content">
-              Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
-            </p>
-            <div class="client__name">
-              <div class="line"></div>
-              <p>Candice Adeshina</p>
-              <p>Designer, Google Nigeria.</p>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office1.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+                Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Candice Adeshina</p>
+                <p>Designer, Google Nigeria.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonies__container">
-          <!-- <div class="testimonies__image">
-            <img
-              src="/assets/img/office2.jpg"
-              alt=""
-              
-            />
-          </div> -->
-          <div class="testimonies__text">
-            <p class="testimonies__text__content">
-            Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
-            </p>
-            <div class="client__name">
-              <div class="line"></div>
-              <p>Andy Ameobi</p>
-              <p>Freelancer</p>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office2.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+              Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Andy Ameobi</p>
+                <p>Freelancer</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonies__container">
-          <!-- <div class="testimonies__image">
-            <img
-              src="/assets/img/office3.jpg"
-              alt=""
-              
-            />
-          </div> -->
-          <div class="testimonies__text">
-            <p class="testimonies__text__content">
-              My team and I were looking for a space to have meetings and that was when we found Spaces.NG. It was an incredible experience and they also ensure that the space on the platform are secure and of high quality. Kudos
-            </p>
-            <div class="client__name">
-              <div class="line"></div>
-              <p>Amanda Amaefule</p>
-              <p>CEO, Every Woman</p>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office3.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+                My team and I were looking for a space to have meetings and that was when we found Spaces.NG. It was an incredible experience and they also ensure that the space on the platform are secure and of high quality. Kudos
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Amanda Amaefule</p>
+                <p>CEO, Every Woman</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonies__container">
-          <!-- <div class="testimonies__image">
-            <img
-              src="/assets/img/office1.jpg"
-              alt=""
-              
-            />
-          </div> -->
-          <div class="testimonies__text">
-            <p class="testimonies__text__content">
-              Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
-            </p>
-            <div class="client__name">
-              <div class="line"></div>
-              <p>Candice Adeshina</p>
-              <p>Designer, Google Nigeria.</p>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office1.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+                Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Candice Adeshina</p>
+                <p>Designer, Google Nigeria.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="testimonies__container">
-          <!-- <div class="testimonies__image">
-            <img
-              src="/assets/img/office2.jpg"
-              alt=""
-              
-            />
-          </div> -->
-          <div class="testimonies__text">
-            <p class="testimonies__text__content">
-            Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
-            </p>
-            <div class="client__name">
-              <div class="line"></div>
-              <p>Andy Ameobi</p>
-              <p>Freelancer</p>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office2.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+              Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Andy Ameobi</p>
+                <p>Freelancer</p>
+              </div>
             </div>
           </div>
         </div>
@@ -283,7 +332,6 @@
         <div class="footer-wrap">
           <div class="footer-info">
             <p class="logo-name">Spaces.NG</p>
-            <!-- <p>Find a space that suits you</p> -->
             <div class="contact">
               <p><i class="fas fa-envelope"></i>spacesng@gmail.com</p>
               <p class="bold-icon"><i class="fas fa-phone-alt"></i>08050040020</p>
@@ -322,8 +370,10 @@
       <div class="pjt-92">
         <p>Designed by PJT-92 Team</p>
       </div>
-  </div>
+    </div>
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/assets/js/index.js"></script>
   </body>
 </html>
