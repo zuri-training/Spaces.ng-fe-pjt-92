@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Spaces.NG</title>
+ <link rel="stylesheet" href="signup.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+
+<div class="container-main">
+
+<nav>
+<div class="nav-container">
+ <div class="nav-brand">
+  <h1 class="nav-brand-name">Spaces.NG</h1>
+   <div class="nav-toggler">
+   
+    <i class="fa fa-bars"></i>
+   </div>
+ </div>
+ <div class="nav-links-container">
+ 
+  <div class="nav-links">
+   <ul>
+    <li class="link-item">
+     <a href="#" class="nav-link-item">Home</a>
+    </li>
+    <li class="link-item">
+     <a href="#" class="nav-link-item">About Us</a>
+    </li>
+    <li class="link-item">
+        <a href="#" class="nav-link-item">Sign up</a>
+       </li>
+    <li class="link-item">
+     <a href="#" class="nav-link-item">Contact Us</a>
+    </li>
+   </ul>
+  </div>
+
+ </div>
+</div>
+
+</nav>
+
+<section>
+ <div class="container">
+
+  <div class="form-container">
+   <div class="form-title">
+    <h2>Lets Get started!</h2>
+    <p> Create an account with us</p>
+
+   </div>
+   
+      <form id="form" class="form-data"action="/signup" method="post">
+        
+    <div class="form-input-container">
+     <i class="fas fa-user"></i>
+     <input type="text" placeholder="Name" class="form-input" id="name"required>
+    </div>
+    <div class="form-input-container">
+     <i class="far fa-envelope"></i>
+     <input type="email" placeholder="Email" class="form-input"id="email"required>
+     </div>
+     <div class="form-input-container">
+     <i class="fas fa-lock"></i>
+     <input type="password" placeholder="Password" class="form-input" id="password" required>
+     <span id='message'></span>
+   
+    </div>
+    <div class="form-input-container">
+        <i class="far fa-eye"></i>
+        <input type="password" placeholder="Confirm password" class="form-input" id="confirm"required>
+        <span id='message'></span>
+       </div>
+   
+
+    <button type="submit" class="btn-signup">Sign up </button>
+    <div class="select">
+
+
+
+      <input type="checkbox" id="agreement" name="agreeement" value="Bike" class="check">
+      <label for="agreement" class="form-agreement"> I agree with all terms and conditions</label>
+    </div>
+       
+
+   </form>
+
+  </div>
+  <div class="img-container">
+   <img src="./Rectangle 17.png" class="form-img" alt="form image">
+
+  </div>
+
+
+ </div>
+</section>
+ </div>
+
+ <script src="signup.js"></script>
+</body>
+
+</html>
+
