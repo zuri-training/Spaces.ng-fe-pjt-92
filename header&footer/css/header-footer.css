@@ -303,6 +303,8 @@ footer ul li i {
 }
 .bold-icon i {
   font-weight: bold;
+  margin: 0;
+  margin-right: 10px;
 }
 footer .contact p {
   font-size: 16px;
@@ -380,7 +382,7 @@ footer ul.social li i:hover {
   }
   /* footer */
   footer {
-    padding: 20px;
+    padding: 40px 20px;
   }
   .footer-wrap {
     justify-content: space-between;
