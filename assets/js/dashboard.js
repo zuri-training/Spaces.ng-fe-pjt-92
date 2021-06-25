@@ -32,7 +32,7 @@ function loadState() {
     dropdown.add(defaultOption)
     dropdown.selectedIndex = 0
 
-    fetch('http://locationsng-api.herokuapp.com/api/v1/states')
+    fetch('https://locationsng-api.herokuapp.com/api/v1/states')
     .then(response => response.json())
     .then(data => {
         let option;
@@ -65,7 +65,7 @@ function loadLga(state) {
     dropdown.selectedIndex = 0
 
 
-    fetch(`http://locationsng-api.herokuapp.com/api/v1/states/${state}/lgas`)
+    fetch(`https://locationsng-api.herokuapp.com/api/v1/states/${state}/lgas`)
     .then(response => response.json())
     .then(data => {
        
