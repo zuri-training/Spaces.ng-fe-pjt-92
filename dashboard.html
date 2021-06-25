@@ -21,69 +21,69 @@
           <div class="logo">
             <p class="logo-name"><a href="index.html"> Spaces.NG</a></p>
           </div>
-          <nav>
-            <ul>
-              <li><a href="#"> About Us</li></a>
-              <li><a href="#"> Pricing</li></a>
-              <li><a href="#"> Contact Us</li></a>
-              <button class="register-btn"><a href="#">Do you have a space?</a></button>
-              <button><a href="#">Sign in</a></button>
-            </ul>
-          </nav>
-          <div id="menu-icon">
-            <div class="bar" id="bars" onclick="lockScroll();"></div>
+          <div class="nav-wrap">
+            <nav>
+              <ul>
+                <li><a href="aboutus.html"> About Us</li></a>
+                <li><a href="contactus.html"> Contact Us</li></a>
+                <button class="register-btn"><a href="spaceowner.html">Do you have a space?</a></button>
+              </ul>
+            </nav>
+            <div class="user" id = "user">   
+              <i class="far fa-user-circle"></i>
+              <ul class="dropdown">
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="signin.html">Sign in</a></li>
+              </ul>
+            </div>
+            <div id="menu-icon">
+              <div class="bar" id="bars" onclick="lockScroll();"></div>
+            </div>
           </div>
+          
         </header>
         <div id = "mobile-nav">
           <ul id="mobile-nav-links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Register a Space</a></li>
-            <li><a href="#">Find a Space</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="spaceowner.html">Register a Space</a></li>
+            <!-- <li><a href="dashboard.html">Find a Space</a></li> -->
           </ul>
         </div>
       </div>
       <div class="main">
         <div class="breadcrumb">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">
               <span class="state">Lagos</span> (
               <span class="number-found-state">100</span> )</a>
             </li>
             <li><a href="#">
-              Workspaces in <span class="city">Ikeja</span> (
+              Workspaces in <span class="lga">Ikeja</span> (
               <span class="number-found-city">10</span> )</a>
             </li>
           </ul>
         </div>
-        <form action="">
+        <form action="#" >
           <div class="country form-item">
             <label>Select a Country</label>
-            <select name="Select a Country" id="country">
+            <select name="Select a Country" id="country" disabled>
               <option value="Nigeria">Nigeria</option>
-              <option value="Ghana">Ghana</option>
-              <option value="Togo">Togo</option>
             </select>
           </div>
           <div class="state form-item">
             <label>Select a State</label>
-            <select name="Select a State" id="state">
-              <option value="Lagos">Lagos</option>
-              <option value="Abuja">Abuja</option>
-              <option value="Enugu">Enugu</option>
+            <select name="Select a State" class="state" id="state">
             </select>
           </div>
           <div class="city form-item">
-            <label>Select a City</label>
-            <select name="Select a City" id="city">
-              <option value="Ikeja">Ikeja</option>
-              <option value="Ikoyi">Ikoyi</option>
-              <option value="Magodo">Magodo</option>
+            <label>Select LGA</label>
+            <select name="Select a City" class="lga" id="lga">
+              <option value="">Select an LGA</option>
             </select>
           </div>
-          <button id="submit"><a href="dashboard2.html">Find Space</a></button>
+          <button id="submit"><a href="dashboard.html">Find Space</a></button>
         </form>
         <div class="page-title">
           <h1>
@@ -93,7 +93,7 @@
         </div>
         <div class="main-body">
           <section class="aside">
-            <div class="aside-form">
+            <!-- <div class="aside-form">
               <div class="aside-form-item">
                 <h3>Country</h3>
                 <select name="country" id="country">
@@ -113,7 +113,7 @@
                   <option value="Ikeja">Ikeja</option>
                 </select>
               </div>  
-            </div>
+            </div> -->
             <div class="space-filters">
               <div class="facilities space-filters-item">
                 <h3 class="aside-item-title">Facilities</h3>
@@ -137,8 +137,17 @@
                 </div>
               </div>
               <div class="attendees space-filters-item">
-                <h3 class="aside-item-title">Attendees</h3>
-                <div class="filter-wrap close-filter">
+                <h3 class="">Attendees</h3>
+                <select name="attendees" id="attendees">
+                  <option value="Any">Any</option>
+                  <option value="0-5">0-5</option>
+                  <option value="5-10">5-10</option>
+                  <option value="10-14">10-14</option>
+                  <option value="15-19">15-19</option>
+                  <option value="20-29">20-29</option>
+                  <option value="30+">30+</option>
+                </select>
+                <!-- <div class="filter-wrap close-filter">
                   <div class="attendees-item">
                     <p>Any</p>
                     <input type="checkbox" name="any" id="any" />
@@ -155,35 +164,27 @@
                     <p>10-14</p>
                     <input
                       type="checkbox"
-                      name="ten to twenty"
-                      id="ten-to-twenty"
+                      name="ten to fourteen"
+                      id="ten-to-fourteen"
                     />
                   </div>
                   <div class="attendees-item">
                     <p>15-19</p>
                     <input
                       type="checkbox"
-                      name="ten to twenty"
-                      id="ten-to-twenty"
+                      name="fifteen to nineteen"
+                      id="fifteen-to-nineteen"
                     />
                   </div>
                   <div class="attendees-item">
                     <p>20-29</p>
                     <input
                       type="checkbox"
-                      name="ten to twenty"
-                      id="ten-to-twenty"
+                      name="above twenty"
+                      id="above twenty"
                     />
                   </div>
-                  <div class="attendees-item">
-                    <p>30+</p>
-                    <input
-                      type="checkbox"
-                      name="ten to twenty"
-                      id="ten-to-twenty"
-                    />
-                  </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </section>
@@ -216,7 +217,7 @@
               <div class="spaces-item">
                 <img src="assets/img/hub-one.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Hub One</p>
+                  <p class="space-name">HubOnze</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -230,7 +231,7 @@
               <div class="spaces-item">
                 <img src="assets/img/normadians.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Normadians</p>
+                  <p class="space-name">Normadian</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -244,7 +245,7 @@
               <div class="spaces-item">
                 <img src="assets/img/vibranium-valley.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Vibranium Valley</p>
+                  <p class="space-name">Vibrania Valley</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -258,7 +259,7 @@
               <div class="spaces-item">
                 <img src="assets/img/work-central.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Work Central</p>
+                  <p class="space-name">Work Centre</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -272,7 +273,7 @@
               <div class="spaces-item">
                 <img src="assets/img/lead-space.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Lead Space</p>
+                  <p class="space-name">Leadspaces</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -286,7 +287,7 @@
               <div class="spaces-item">
                 <img src="assets/img/cube-hub.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Cube Hub</p>
+                  <p class="space-name">CuboidHub</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -300,7 +301,7 @@
               <div class="spaces-item">
                 <img src="assets/img/work-bay.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Work Bay</p>
+                  <p class="space-name">Work Base</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -314,7 +315,7 @@
               <div class="spaces-item">
                 <img src="assets/img/redahlia.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Redahlia Workspaces</p>
+                  <p class="space-name">RaDahly Workspaces</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -328,7 +329,7 @@
               <div class="spaces-item">
                 <img src="assets/img/wennovation.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">Wennovation Hub</p>
+                  <p class="space-name">Wennovision Hub</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -342,7 +343,7 @@
               <div class="spaces-item">
                 <img src="assets/img/african-hub.png" alt="" />
                 <div class="space-item-text">
-                  <p class="space-name">African Hub</p>
+                  <p class="space-name">Afrique Hubs</p>
                   <p class="space-item-location">
                     <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
                   </p>
@@ -354,31 +355,42 @@
                 </div>
               </div>
             </div>
+            <div class="pagination">
+              <a href="#">&laquo;</a>
+              <a class="active-page" href="#">1</a>
+              <a href="#">&raquo;</a>
+            </div>
           </section>
         </div>
       </div>
       <div class="footer-component">
         <footer>
           <div class="footer-wrap">
-            <div class="logo">
+            <div class="footer-info">
               <p class="logo-name">Spaces.NG</p>
+              <div class="contact">
+                <p><i class="fas fa-envelope"></i>spacesng@gmail.com</p>
+                <p class="bold-icon"><i class="fas fa-phone-alt"></i>08050040020</p>
+                <p class="app"><i class="fab fa-android"></i><a href=""> Download our Android app</a></p>
+                <p class="app"><i class="fab fa-apple"></i><a href="">Download our IOS app</a></p>
+              </div>
             </div>
             <div class="site-links">
               <h3>Site Links</h3>
               <ul>
-                <li>About Us</li>
-                <li>Pricing</li>
-                <li>Contact Us</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i><a href="aboutus.html">About Us</a></li>
+              
+                <li><i class="fas fa-arrow-alt-circle-right"></i><a href="contactus.html">Contact Us</a></li>
               </ul>
             </div>
             <div class="legal">
               <h3>Legal</h3>
               <ul>
-                <li>Terms & conditions</li>
-                <li>License Agreement</li>
-                <li>Privacy Policy</li>
-                <li>Copyright Information</li>
-                <li>Cookies Policy</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i>Terms & conditions</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i>License Agreement</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i>Privacy Policy</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i>Copyright Information</li>
+                <li><i class="fas fa-arrow-alt-circle-right"></i>Cookies Policy</li>
               </ul>       
             </div>
             <div>
@@ -391,9 +403,9 @@
             </div>
           </div>
         </footer>
-        <div class="pjt-92">
-          <p>Designed by PJT-92 Team</p>
-        </div>
+          <div class="pjt-92">
+            <p>Designed by PJT-92 Team</p>
+          </div>
       </div>
     </div>
 

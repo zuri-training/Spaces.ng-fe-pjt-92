@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #e5e5e5;
+  background-color: #eff7f7;
   font-size: 14px;
   font-family: "roboto";
 }
@@ -44,6 +44,10 @@ img {
 .header-components {
   background-color: #4623d2;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 header {
   display: flex;
@@ -51,7 +55,7 @@ header {
   justify-content: space-between;
   height: 100px;
   color: white;
-  padding: 0 50px 0 30px;
+  padding: 0 50px 0 40px;
   z-index: 10;
   max-width: 1600px;
   margin: 0 auto;
@@ -62,6 +66,50 @@ header {
   font-family: "roboto";
   letter-spacing: 2px;
   cursor: pointer;
+}
+.nav-wrap {
+  display: flex;
+  align-items: center;
+}
+.user {
+  height: 45px;
+  margin: 0 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user i {
+  font-size: 40px;
+}
+ul.dropdown {
+  cursor: pointer;
+  display: none;
+  /* background-color: red; */
+}
+ul.dropdown li {
+  font-size: 16px;
+  color: black;
+  padding: 15px;
+  width: 120px;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+}
+ul.dropdown li:last-child {
+  border-top: 1px solid rgb(169, 181, 182);
+}
+.user:hover ul.dropdown {
+  display: block;
+  position: absolute;
+  top: 0;
+  padding-top: 20px;
+  margin-top: 40px;
+  z-index: 150;
+}
+.user:hover ul.dropdown li:hover {
+  background-color: #4623d2;
+  color: white;
 }
 nav ul {
   display: flex;
@@ -74,6 +122,7 @@ nav ul * {
 }
 nav ul li {
   padding: 10px 0;
+  text-transform: uppercase;
 }
 nav ul *:hover {
   background-color: white;
@@ -222,7 +271,7 @@ nav ul button {
 .main {
   width: 95%;
   max-width: 1600px;
-  margin: 0 auto;
+  margin: 120px auto 0;
 }
 /* BREADCRUMB STYLES */
 .breadcrumb ul {
@@ -291,7 +340,8 @@ aside-form-item {
 label::after,
 .aside-form h3::after,
 .sort p::after,
-.aside-item-title::after {
+.aside-item-title::after,
+.attendees::after {
   content: "";
   height: 0px;
   width: 0px;
@@ -309,6 +359,10 @@ label::after,
 }
 .aside-item-title::after {
   opacity: 0;
+}
+.attendees::after {
+  top: unset;
+  bottom: 50px;
 }
 .form-item,
 #submit {
@@ -360,6 +414,13 @@ section.aside {
 .aside-item-title {
   position: relative;
 }
+.filter-wrap {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  border: 0;
+}
 .aside-form select,
 .sort select {
   width: 100%;
@@ -371,18 +432,32 @@ section.aside {
   padding: 0 10px;
   appearance: none;
 }
-.facilities,
-.attendees {
-  margin-top: 20px;
-  padding: 20px 0;
+.facilities {
+  padding: 0 0 20px;
   border-bottom: 1px solid #c6c6ca;
   font-size: 14px;
+}
+.attendees {
+  padding: 0 0 20px;
+  font-size: 14px;
+  position: relative;
+}
+.attendees select {
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #c6c6ca;
+  appearance: none;
 }
 .facilities-item,
 .attendees-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 .facilities-item input,
 .attendees-item input {
@@ -531,6 +606,31 @@ section.results {
 
 /* END OF SPACES WRAP STYLES */
 
+/* Pagination links */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  margin: 0 10px;
+  border: 1px solid #ddd;
+}
+.pagination a.active-page {
+  background-color: #1a027b;
+  color: white;
+}
+.pagination a:hover:not(.active-page) {
+  background-color: #ddd;
+}
+
 /* FOOTER STYLES */
 footer {
   background-color: #1a027b;
@@ -545,8 +645,24 @@ footer {
   display: flex;
   justify-content: space-around;
 }
-footer .logo p {
+footer .footer-info p {
   margin: 0 0 20px;
+  font-weight: bold;
+}
+.footer-info i,
+footer ul li i {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: initial;
+}
+.bold-icon i {
+  font-weight: bold;
+  margin: 0;
+  margin-right: 10px;
+}
+footer .contact p {
+  font-size: 16px;
+  color: #8396bb;
 }
 footer h3 {
   color: white;
@@ -566,20 +682,19 @@ footer ul li {
 }
 footer ul li:hover {
   color: white;
-  padding-left: 5px;
 }
 footer ul.social {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-footer ul.social li {
+footer ul.social li i {
   margin: 0 20px 0 0;
   font-size: 24px;
   color: white;
   font-weight: normal;
 }
-footer ul.social li:hover {
+footer ul.social li i:hover {
   padding: 0;
   color: #8396bb;
 }
@@ -596,6 +711,11 @@ footer ul.social li:hover {
 .pjt-92 p {
   margin: 0;
   color: #8396bb;
+}
+.pjt-92 p:hover {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 /* END OF FOOTER STYLES */
 
@@ -626,10 +746,13 @@ footer ul.social li:hover {
   .attendees {
     margin: 0;
   }
+  .attendees::after {
+    top: unset;
+    bottom: 30px;
+  }
   .aside-item-title::after {
     opacity: 1;
   }
-  .aside-form,
   .space-filters {
     display: flex;
     justify-content: space-between;
@@ -644,25 +767,40 @@ footer ul.social li:hover {
   .space-filters-item {
     width: 47%;
     position: relative;
+    padding: 0;
   }
-  .filter-wrap {
+  .facilities {
+    border: none;
+  }
+  .filter-wrap.open-filter {
     position: absolute;
-    top: 50px;
+    /* display: block; */
+    top: 20px;
+    height: 200px;
     left: 0;
     background-color: white;
     width: 100%;
     margin-top: 20px;
     padding: 10px;
-    z-index: 20;
+    z-index: 200;
   }
   .close-filter {
     display: none;
   }
   .open-filter {
-    display: block;
+    /* display: block; */
+  }
+  .spaces-item:after {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .spaces-item:hover:after {
+    display: initial;
   }
   footer {
-    padding: 20px;
+    padding: 40px 20px;
+  }
+  .footer-wrap {
+    justify-content: space-between;
   }
 }
 
@@ -673,6 +811,15 @@ footer ul.social li:hover {
   }
   .logo-name {
     font-size: 20px;
+  }
+  .user i {
+    font-size: 30px;
+  }
+  .user:hover ul.dropdown {
+    margin-top: 30px;
+  }
+  .main {
+    margin-top: 90px;
   }
   .breadcrumb ul {
     flex-wrap: wrap;
@@ -712,6 +859,12 @@ footer ul.social li:hover {
   .attendees {
     padding: 10px;
   }
+  .attendees select {
+    padding: 0 10px;
+    margin: 0;
+    height: 40px;
+    font-size: 16px;
+  }
   .facilities h3,
   .attendees h3 {
     cursor: pointer;
@@ -740,17 +893,12 @@ footer ul.social li:hover {
   .spaces-item {
     width: 90%;
     margin: 0 auto 20px;
-    height: 350px;
+    height: 300px;
     min-width: 250px;
-  }
-  footer {
-    display: flex;
-    justify-content: center;
   }
   .footer-wrap {
     font-size: 14px;
     flex-direction: column;
-    text-align: center;
   }
   footer .logo-name {
     text-align: center;
@@ -760,15 +908,16 @@ footer ul.social li:hover {
   }
   footer ul.social {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 120px;
-    margin: 0 auto;
+    justify-content: left;
   }
   footer ul.social li {
     margin: 0;
   }
-  .pjt-92 {
+  footer ul.social li i {
+    font-size: 24px;
+  }
+  .pjt-92,
+  footer .contact p {
     font-size: 14px;
   }
 }
