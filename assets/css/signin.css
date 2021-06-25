@@ -646,7 +646,7 @@ input#reset-btn:hover {
     flex-direction: column;
   }
   footer .logo-name {
-    text-align: center;
+    text-align: left;
   }
   footer h3 {
     font-size: 16px;
