@@ -24,6 +24,7 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
+  position: relative;
   /* overflow: hidden; */
 }
 /* HEADER STYLES */
@@ -587,6 +588,68 @@ input#reset-btn:hover {
 }
 
 /* END OF FORGOT PASSWORD PAGE STYLES */
+
+/* MODAL STYLES */
+
+.modal-wrap {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  display: none;
+}
+.modal {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  border-radius: 4px;
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.modal form {
+  width: 80%;
+}
+.modal form input {
+  width: 100%;
+  height: 50px;
+  background-color: #4623d2;
+  margin-top: 50px;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+}
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.modal-close:hover {
+  color: #aaa;
+}
+
+/* END OF MODAL STYLES */
 
 /*  */
 @media screen and (max-width: 1150px) {
