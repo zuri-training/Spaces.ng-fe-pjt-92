@@ -32,7 +32,7 @@ function loadState() {
     dropdown.add(defaultOption)
     dropdown.selectedIndex = 0
 
-    fetch('https://locationsng-api.herokuapp.com/api/v1/states')
+    fetch('http://locationsng-api.herokuapp.com/api/v1/states')
     .then(response => response.json())
     .then(data => {
         let option;
@@ -65,7 +65,7 @@ function loadLga(state) {
     dropdown.selectedIndex = 0
 
 
-    fetch(`https://locationsng-api.herokuapp.com/api/v1/states/${state}/lgas`)
+    fetch(`http://locationsng-api.herokuapp.com/api/v1/states/${state}/lgas`)
     .then(response => response.json())
     .then(data => {
        
@@ -134,4 +134,18 @@ function likeBtn (){
 likeBtn();
 
 
+// FUNCTION FOR NO RESULTS
 
+const noResultWrap = document.querySelector('.no-results')
+const main = document.querySelector('.main')
+
+function noSearch () {
+    if (noResultWrap.style.display !== 'none') {
+        if(document.documentElement.clientWidth < 7600){
+            main.style.paddingBottom = '50px'
+        }else{
+            main.style.paddingBottom = '150px'
+        } 
+    }
+}
+noSearch();

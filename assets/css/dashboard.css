@@ -332,6 +332,7 @@ aside-form-item {
   background-color: transparent;
   appearance: none;
   padding: 0 10px;
+  cursor: pointer;
 }
 .aside-form-item,
 .sort {
@@ -719,6 +720,21 @@ footer ul.social li i:hover {
 }
 /* END OF FOOTER STYLES */
 
+/* NO RESULTS SECTION STYLES*/
+
+.no-results {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+  display: none;
+}
+.no-results img {
+  margin-right: 20px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1150px) {
   #menu-icon {
@@ -833,11 +849,16 @@ footer ul.social li i:hover {
   }
   form {
     width: 100%;
-    height: 100%;
+    height: 140px;
+    max-width: 450px;
     min-width: unset;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     border: none;
-    padding: 20px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
   }
   .page-title h1 {
     font-size: 28px;
@@ -845,12 +866,7 @@ footer ul.social li i:hover {
   }
   .form-item,
   #submit {
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-  }
-  .form-item {
-    margin-bottom: 20px;
+    width: 42%;
   }
   .aside h3 {
     font-size: 16px;
