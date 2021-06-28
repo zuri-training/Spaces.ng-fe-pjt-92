@@ -368,6 +368,9 @@ nav ul button {
   height: 250px;
   border: 2px solid rgb(218, 220, 221);
   margin: 10px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .upload button {
   width: 80%;
@@ -388,6 +391,13 @@ nav ul button {
   height: 300px;
   border: 2px solid rgb(218, 220, 221);
   margin: 10px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-block i,
+.map-wrap i {
+  font-size: 48px;
 }
 #submit {
   width: 80%;
