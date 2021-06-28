@@ -767,6 +767,10 @@ select:focus {
   flex: 0.5;
 }
 
+.space__details__spaces__location-container {
+  justify-content: space-around;
+}
+
 .space__details__spaces__location {
   padding-left: 45px;
   flex: 0.5;
