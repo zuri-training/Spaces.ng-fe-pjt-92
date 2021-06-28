@@ -723,11 +723,11 @@ select:focus {
   width: 100vw;
   height: 100vh;
   background-color: #e5e5e5;
-  /* overflow: hidden; */
 }
 
 .space__details__container {
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
   background-color: #ffffff;
   box-shadow: rgb(50, 76, 77);
   border-radius: 5px;
@@ -764,22 +764,96 @@ select:focus {
 
 .space__details__spaces__text {
   padding-left: 45px;
-  flex: 0.5;
+  flex: 0.6;
 }
 
 .space__details__spaces__location-container {
-  justify-content: space-around;
+  background-color: #bab2db;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+  border-radius: 5px;
 }
 
 .space__details__spaces__location {
   padding-left: 45px;
-  flex: 0.5;
+  flex: 0.4;
   justify-content: center;
 }
 
-.space__details__space__contacts {
-  background-color: #bab2db;
+/* .space__details__space__contacts {
+   padding-left: 20px;
+  margin-right: 20px; 
+} */
+
+.space__details__spaces__location-heading {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
 }
+
+.space__details__space__contacts a {
+  margin-left: 15px;
+  font-size: 12px;
+}
+
+.space__details__spaces__street span {
+  margin-left: 15px;
+}
+
+.space__details__spaces__rating-container i {
+  font-size: 20px;
+  color: gold;
+  margin-bottom: 5px;
+}
+
+.space__details__spaces__text-content {
+  color: #443a6c;
+}
+
+.space__details__spaces__text-content span {
+  font-weight: bold;
+}
+
+.space__details__facilities {
+  width: 100%;
+  display: flex;
+  padding: 70px;
+  justify-content: space-between;
+}
+
+.space__details__facilities-map img {
+  width: 250px;
+}
+
+.space__details__facilities-text p span {
+  margin-right: 15px;
+  font-weight: bold;
+  color: #443a6c;
+}
+
+.space__details__facilities-text h4 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+/* table */
+.table__column {
+  float: left;
+  width: 170px;
+  padding: 10px;
+  height: 100px;
+}
+
+.table__row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* table end */
 
 /* space details */
 .footer-component {
