@@ -10,7 +10,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/spaceowner.css" />
+    <link rel="stylesheet" href="spaceowner.css" />
     <title>Register your space with us and let others find it | Spaces.Ng</title>
   </head>
   <body>
@@ -125,19 +125,25 @@
             </div>
             
             <label for="price">Price</label>
-            <input type="text" placeholder="Price per hour">
+            <input type="text" placeholder="Price per hour(N)">
             
           </div>
         </section>
-        <section class="map">
-          <h2>Add Map Location</h2>
-          <input type="text" placeholder="Search for location">
-          <div class="map-wrap">
-            <i class="fas fa-map-marked"></i>
-          </div>
+        <section class="contact-info">
+          <h2>Add Contact Information</h2>
+          <input type="text" placeholder="Add State">
+          <input type="text" placeholder="Add LGA">
+          <input type="text" placeholder="Add Street Address">
+          <input type="text" placeholder="Add Phone">
+          <input type="text" placeholder="Add Email">
+          Add Social Media Accounts
+          <input type="text" placeholder="Twitter">
+          <input type="text" placeholder="Instagram">
+          <input type="text" placeholder="Facebook">
+          <button id="submit"><a href="spaceregistered.html">SUBMIT</a></button>
         </section>
         
-        <input type="submit" value="Submit Space" id="submit">
+        
       </form>
     </div>
   </div>
@@ -185,6 +191,6 @@
         <p>Designed by PJT-92 Team</p>
       </div>
   </div>
-    <script src="assets/js/spaceowner.js"></script>
+    <script src="spaceowner.js"></script>
   </body>
 </html>
