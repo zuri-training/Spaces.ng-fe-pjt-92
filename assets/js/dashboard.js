@@ -32,19 +32,15 @@ function loadState() {
     dropdown.add(defaultOption)
     dropdown.selectedIndex = 0
 
-    fetch('http://locationsng-api.herokuapp.com/api/v1/states')
+    fetch('NgStateAndLgaApi.txt')
     .then(response => response.json())
     .then(data => {
         let option;
 
         for (let i = 0; i < data.length; i++) {
             option = document.createElement('option')
-            option.text = data[i].name
-            if (option.text !== 'Federal Capital Territory') {
-                option.value = data[i].name
-            } else {
-                option.value = 'Abuja'
-            }
+            option.text = data[i].state.name
+            option.value = data[i].state.id
             dropdown.add(option)
         }
     })
@@ -65,17 +61,21 @@ function loadLga(state) {
     dropdown.selectedIndex = 0
 
 
-    fetch(`http://locationsng-api.herokuapp.com/api/v1/states/${state}/lgas`)
-    .then(response => response.json())
-    .then(data => {
-       
+    fetch('NgStateAndLgaApi.txt')
+        .then(response => response.json())
+        .then(data => {
+        
         let option;
 
         for (let i = 0; i < data.length; i++) {
-            option = document.createElement('option')
-            option.text = data[i]
-            option.value = data[i]
-            dropdown.add(option)
+            if (parseInt(state) === data[i].state.id) {
+                for (let j = 0; j < data[i].state.locals.length; j++) {
+                    option = document.createElement('option')
+                    option.text = data[i].state.locals[j].name
+                    option.value = data[i].state.locals[j].id
+                    dropdown.add(option)
+                }
+            }
         }
     })
     .catch(error => {
