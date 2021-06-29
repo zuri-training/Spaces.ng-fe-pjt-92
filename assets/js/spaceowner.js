@@ -19,3 +19,22 @@ menuIcon.addEventListener('click', () => {
 function lockScroll() {
     document.body.classList.toggle('lock-scroll');
 }
+
+// ADD FACILITY
+
+const checkboxWrap = document.querySelector('.checkbox-wrap')
+const addFacility = document.getElementById('other-facilities')
+const addBtn = document.querySelector('.add')
+
+addBtn.addEventListener('click', (event) => {
+    let facility = addFacility.value;
+    let newDiv = document.createElement('div')
+    newDiv.classList.add('checkbox-item')
+    newDiv.innerHTML = '<input type="checkbox" checked>'
+    newPTag = document.createElement('p')
+    newPTag.innerText = facility
+    newDiv.appendChild(newPTag)
+    checkboxWrap.appendChild(newDiv)
+    event.preventDefault()
+    document.getElementById('other-facilities').value = ""
+})
