@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Get Started with Spaces.NG | Join the Spaces family</title>
+ <link rel="stylesheet" href="assets/css/signup.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="header-components">
+    <header>
+      <div class="logo">
+        <p class="logo-name"><a href="index.html"> Spaces.NG</a></p>
+      </div>
+      <div class="nav-wrap">
+        <nav>
+          <ul>
+            <li><a href="aboutus.html"> About Us</li></a>
+            <li><a href="contactus.html"> Contact Us</li></a>
+            <button class="register-btn"><a href="spaceowner.html">Do you have a space?</a></button>
+          </ul>
+        </nav>
+        <div class="user" id = "user">   
+          <i class="far fa-user-circle"></i>
+          <ul class="dropdown">
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+          </ul>
+        </div>
+        <div id="menu-icon">
+          <div class="bar" id="bars" onclick="lockScroll();"></div>
+        </div>
+      </div>
+      
+    </header>
+    <div id = "mobile-nav">
+      <ul id="mobile-nav-links">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="spaceowner.html">Register a Space</a></li>
+        <!-- <li><a href="dashboard.html">Find a Space</a></li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="form-container">
+      <div class="form-title">
+        <h2>Lets Get started!</h2>
+        <p> Create an account with us</p>
+
+      </div>
+    
+      <form id="form" class="form-data"action="/signup" method="post">
+            
+        <div class="form-input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Name" class="form-input" id="name"required>
+        </div>
+        <div class="form-input-container">
+        <i class="far fa-envelope"></i>
+        <input type="email" placeholder="Email" class="form-input"id="email"required>
+        </div>
+        <div class="form-input-container">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" class="form-input" id="password" required>
+        <span id='message'></span>
+      
+        </div>
+        <div class="form-input-container">
+            <i class="far fa-eye"></i>
+            <input type="password" placeholder="Confirm password" class="form-input" id="confirm"required>
+            <span id='message'></span>
+          </div>
+      
+
+        <button type="submit" class="btn-signup">Sign up </button>
+        <div class="select">
+
+
+
+          <input type="checkbox" id="agreement" name="agreeement" value="Bike" class="check">
+          <label for="agreement" class="form-agreement"> I agree with all terms and conditions</label>
+        </div>
+          
+        <p class="signin">Already have an account, <span class="blue-link"><a href="signin.html">Sign In</a></span></p>
+      </form>
+
+    </div>
+    <div class="img-container">
+      <img src="assets/img/Rectangle 17.png" class="form-img" alt="form image">
+
+    </div>
+
+
+  </div>
+  <div class="footer-component">
+    <footer>
+      <div class="footer-wrap">
+        <div class="footer-info">
+          <p class="logo-name">Spaces.NG</p>
+          <div class="contact">
+            <p><i class="fas fa-envelope"></i>spacesng@gmail.com</p>
+            <p class="bold-icon"><i class="fas fa-phone-alt"></i>08050040020</p>
+            <p class="app"><i class="fab fa-android"></i><a href=""> Download our Android app</a></p>
+            <p class="app"><i class="fab fa-apple"></i><a href="">Download our IOS app</a></p>
+          </div>
+        </div>
+        <div class="site-links">
+          <h3>Site Links</h3>
+          <ul>
+            <li><i class="fas fa-arrow-alt-circle-right"></i><a href="aboutus.html">About Us</a></li>
+          
+            <li><i class="fas fa-arrow-alt-circle-right"></i><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="legal">
+          <h3>Legal</h3>
+          <ul>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Terms & conditions</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>License Agreement</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Privacy Policy</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Copyright Information</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Cookies Policy</li>
+          </ul>       
+        </div>
+        <div>
+          <h3>Social Links</h3>
+          <ul class="social">
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+      <div class="pjt-92">
+        <p>Designed by PJT-92 Team</p>
+      </div>
+  </div>
+ <script src="assets/js/signup.js"></script>
+</body>
+
+</html>
+
