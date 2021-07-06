@@ -675,6 +675,12 @@ select:focus {
   padding: 0 20px;
   line-height: 24px;
 }
+
+.footer-component {
+  margin-bottom: 0;
+  margin-top: 40px;
+  background-color: black;
+}
 footer {
   background-color: #1a027b;
 

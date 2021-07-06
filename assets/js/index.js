@@ -91,7 +91,7 @@ $(function () {
 // POPULATING THE FORM WITH STATES AND LGAS
 
 function loadState() {
-  let dropdown = document.getElementById("state");
+  let dropdown = document.getElementById("state-dropdown");
   dropdown.length = 0;
 
   let defaultOption = document.createElement("option");
@@ -100,19 +100,15 @@ function loadState() {
   dropdown.add(defaultOption);
   dropdown.selectedIndex = 0;
 
-  fetch("http://locationsng-api.herokuapp.com/api/v1/states")
+  fetch("NgStateAndLgaApi.txt")
     .then((response) => response.json())
     .then((data) => {
       let option;
 
       for (let i = 0; i < data.length; i++) {
         option = document.createElement("option");
-        option.text = data[i].name;
-        if (option.text !== "Federal Capital Territory") {
-          option.value = data[i].name;
-        } else {
-          option.value = "Abuja";
-        }
+        option.text = data[i].state.name;
+        option.value = data[i].state.id;
         dropdown.add(option);
       }
     })
@@ -121,8 +117,8 @@ function loadState() {
     });
 }
 
-function loadLga(state) {
-  let dropdown = document.getElementById("lga");
+function loadLga(stateId) {
+  let dropdown = document.getElementById("lga-dropdown");
   dropdown.length = 0;
 
   let defaultOption = document.createElement("option");
@@ -131,16 +127,20 @@ function loadLga(state) {
   dropdown.add(defaultOption);
   dropdown.selectedIndex = 0;
 
-  fetch(`http://locationsng-api.herokuapp.com/api/v1/states/${state}/lgas`)
+  fetch("NgStateAndLgaApi.txt")
     .then((response) => response.json())
     .then((data) => {
       let option;
 
       for (let i = 0; i < data.length; i++) {
-        option = document.createElement("option");
-        option.text = data[i];
-        option.value = data[i];
-        dropdown.add(option);
+        if (parseInt(stateId) === data[i].state.id) {
+          for (let j = 0; j < data[i].state.locals.length; j++) {
+            option = document.createElement("option");
+            option.text = data[i].state.locals[j].name;
+            option.value = data[i].state.locals[j].id;
+            dropdown.add(option);
+          }
+        }
       }
     })
     .catch((error) => {
@@ -150,8 +150,8 @@ function loadLga(state) {
 
 document.addEventListener("DOMContentLoaded", loadState);
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("#state").onchange = function () {
-    let state = this.value;
-    loadLga(state);
+  document.querySelector("#state-dropdown").onchange = function () {
+    let stateId = this.value;
+    loadLga(stateId);
   };
 });
