@@ -6,6 +6,7 @@ const links = document.querySelectorAll("#mobile-nav-links li");
 const bar = document.getElementById("bars");
 
 menuIcon.addEventListener("click", () => {
+  document.body.classList.toggle("lock-scroll")
   bar.classList.toggle("rotate");
   mobileNav.classList.toggle("open");
   if (mobileNav.classList.contains("bg-overlay")) {
@@ -15,9 +16,9 @@ menuIcon.addEventListener("click", () => {
   }
   linksContainer.classList.toggle("nav-animation");
 });
-function lockScroll() {
-  document.body.classList.toggle("lock-scroll");
-}
+// function lockScroll() {
+//   document.body.classList.toggle("lock-scroll");
+// }
 
 // SLIDERS
 
