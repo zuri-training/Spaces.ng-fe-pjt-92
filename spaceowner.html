@@ -35,7 +35,7 @@
             </ul>
           </div>
           <div id="menu-icon">
-            <div class="bar" id="bars" onclick="lockScroll();"></div>
+            <div class="bar" id="bars"></div>
           </div>
         </div>
         
@@ -58,13 +58,13 @@
       </ul>
     </div>
     <div class="main">
-      <form action="#">
+      <form target="_blank" action="spaceregistered.html" method="POST">
         <h1>Do you have a space?</h1>
         <h4>Submit your space for listing on our website</h4>
         <section class="info">
           <div class="basic-info">
-            <input type="text" placeholder="Name of space">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Space description"></textarea>
+            <input type="text" placeholder="Name of space" required>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Space description" required></textarea>
             <div class="facilities">
               <h3>Facilities</h3>
               <div class="checkbox-wrap">
@@ -108,13 +108,15 @@
           <div class="other">
             <div class="upload">
               <div class="img-block">
-                <i class="fas fa-images"></i>
+                <!-- <i class="fas fa-images"></i> -->
+                <img id="space-image">
               </div>
-              <button>Upload thumbnail</button>
+              <input type="file" name="space-img" id="img-upload" accept="image/*" onchange="previewImg(event);" required>
+              <!-- <button>Upload thumbnail</button> -->
             </div>
             <div class="select-item">
               <label for="capacity">Space capacity</label>
-              <select name="capacity" id="capacity">
+              <select name="capacity" id="capacity" required>
                 <option value="1-4">1-4</option>
                 <option value="5-9">5-9</option>
                 <option value="10-14">10-14</option>
@@ -125,22 +127,26 @@
             </div>
             
             <label for="price">Price</label>
-            <input type="text" placeholder="Price per hour(N)">
+            <input type="text" placeholder="Price per hour(N)" required>
             
           </div>
         </section>
         <section class="contact-info">
           <h2>Add Contact Information</h2>
-          <input type="text" placeholder="Add State">
-          <input type="text" placeholder="Add LGA">
-          <input type="text" placeholder="Add Street Address">
-          <input type="text" placeholder="Add Phone">
+          <select name="Select a State" id="state-dropdown" required>
+            <option value="">Select a state</option>
+          </select>
+          <select name="Select a City" id="lga-dropdown" required>
+            <option value="">Select L.G.A</option>
+          </select>
+          <input type="text" placeholder="Add Street Address" required>
+          <input type="text" placeholder="Add Phone" required>
           <input type="text" placeholder="Add Email">
           Add Social Media Accounts
           <input type="text" placeholder="Twitter">
           <input type="text" placeholder="Instagram">
           <input type="text" placeholder="Facebook">
-          <button id="submit"><a href="spaceregistered.html">SUBMIT</a></button>
+          <input type="submit" value="submit" id="submit">
         </section>
         
         
