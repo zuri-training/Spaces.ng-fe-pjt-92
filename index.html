@@ -7,21 +7,21 @@
     <!-- <link rel="stylesheet" href="assets/css/slick.css"> -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Welcome to Spaces.NG | Find a Space that suits you</title>
   </head>
   <body>
     <div class="header-components">
       <header> 
         <div class="logo">
-          <p class="logo-name"><a href="#"> Spaces.NG</a></p>
+          <p class="logo-name"><a href="index.html"> Spaces.NG</a></p>
         </div>
         <div class="nav-wrap">
           <nav>
             <ul>
-              <li><a href="#"> About Us</li></a>
-              <li><a href="#"> Contact Us</li></a>
-              <button class="register-btn"><a href="#">Do you have a space?</a></button>
+              <li><a href="aboutus.html"> About Us</li></a>
+              <li><a href="contactus.html"> Contact Us</li></a>
+              <button class="register-btn"><a href="spaceowner.html">Do you have a space?</a></button>
             </ul>
           </nav>
           <div class="user" id = "user">   
@@ -32,7 +32,7 @@
             </ul>
           </div>
           <div id="menu-icon">
-            <div class="bar" id="bars" onclick="lockScroll();"></div>
+            <div class="bar" id="bars"></div>
             <!-- <i class="far fa-user-circle"></i> -->
           </div>
         </div>
@@ -40,9 +40,9 @@
       </header>
       <div id = "mobile-nav">
         <ul id="mobile-nav-links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Register a Space</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="spaceowner.html">Register a Space</a></li>
           <li><a href="#">Find a Space</a></li>
         </ul>
       </div>
@@ -65,7 +65,6 @@
           <label>Select a State</label>
           <select name="Select a State" id="state-dropdown">
             <option value="">Select a state</option>
-           
           </select>
         </div>
         <div class="city form-item">
@@ -80,7 +79,7 @@
     <section class="intro__items">
       <div class="intro__item">
         <span class="intro__item__image">
-          <img src="/assets/img/wifi.png" alt="" />
+          <img src="assets/img/wifi.png" alt="" />
         </span>
         <h3 class="intro__item__name">24/7 Internet</h3>
         <p class="intro__item__details">Enjoy unfettered internet service</p>
@@ -88,7 +87,7 @@
       <div id="border__right"></div>
       <div class="intro__item">
         <span class="intro__item__image">
-          <img src="/assets/img/flash-outline.png" alt="" />
+          <img src="assets/img/flash-outline.png" alt="" />
         </span>
         <h3 class="intro__item__name">Steady power supply</h3>
         <p class="intro__item__details">Enjoy uninterrupted power supply</p>
@@ -96,7 +95,7 @@
       <div id="border__right" class="none"></div>
       <div class="intro__item">
         <span class="intro__item__image">
-          <img src="/assets/img/fast-food-outline.png" alt="" />
+          <img src="assets/img/fast-food-outline.png" alt="" />
         </span>
         <h3 class="intro__item__name">Refreshments</h3>
         <p class="intro__item__details">
@@ -106,7 +105,7 @@
       <div id="border__right"></div>
       <div class="intro__item">
         <span class="intro__item__image">
-          <img src="/assets/img/barbell-outline.png" alt="" />
+          <img src="assets/img/barbell-outline.png" alt="" />
         </span>
         <h3 class="intro__item__name">Workout Facilities</h3>
         <p class="intro__item__details">
@@ -117,6 +116,7 @@
     <section class="featured__spaces">
       <h3>FEATURED SPACES</h3>
       <div class="featured__spaces__wrap">
+        <a href="#">
         <div class="spaces-wrap">
           <div class="spaces-item">
             <img src="assets/img/hub-one.png" alt="" />
@@ -131,64 +131,58 @@
               <i class="fas fa-star"></i>
             </div>
           </div>
-        </div>
+        </div></a>
+        <a href="#">
         <div class="spaces-wrap">
-        
-            <div class="spaces-item">
-              <img src="assets/img/normadians.png" alt="" />
-              <div class="space-item-text">
-                <p class="space-name">Kolab </p>
-                <p class="space-item-location">
-                  <i class="fas fa-map-marker-alt"></i> Kaduna, Nigeria.
-                </p>
-              </div>
-              <div class="ratings">
-                <p class="rating-value">5.0</p>
-                <i class="fas fa-star"></i>
-              </div>
+          <div class="spaces-item">
+            <img src="assets/img/normadians.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Kolab </p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Kaduna, Nigeria.
+              </p>
             </div>
-        
-         
-        </div>
-        <div class="spaces-wrap">
-          
-            <div class="spaces-item">
-              <img src="assets/img/vibranium-valley.png" alt="" />
-              <div class="space-item-text">
-                <p class="space-name">nHub Nigeria</p>
-                <p class="space-item-location">
-                  <i class="fas fa-map-marker-alt"></i> Plateau, Nigeria.
-                </p>
-              </div>
-              <div class="ratings">
-                <p class="rating-value">5.0</p>
-                <i class="fas fa-star"></i>
-              </div>
+            <div class="ratings">
+              <p class="rating-value">5.0</p>
+              <i class="fas fa-star"></i>
             </div>
-        
-          
-        </div>
+          </div>
+        </div></a>
+        <a href="#">
         <div class="spaces-wrap">
-        
-            <div class="spaces-item">
-              <img src="assets/img/work-central.png" alt="" />
-              <div class="space-item-text">
-                <p class="space-name">andela</p>
-                <p class="space-item-location">
-                  <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
-                </p>
-              </div>
-              <div class="ratings">
-                <p class="rating-value">5.0</p>
-                <i class="fas fa-star"></i>
-              </div>
+          <div class="spaces-item">
+            <img src="assets/img/vibranium-valley.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">nHub Nigeria</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Plateau, Nigeria.
+              </p>
             </div>
-          
-         
-        </div>
+            <div class="ratings">
+              <p class="rating-value">5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div></a>
+        <a href="#">
         <div class="spaces-wrap">
-          
-            <div class="spaces-item">
+          <div class="spaces-item">
+            <img src="assets/img/work-central.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">andela</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">5.0</p>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div></a>
+        <a href="#">
+        <div class="spaces-wrap">
+          <div class="spaces-item">
             <img src="assets/img/lead-space.png" alt="" />
             <div class="space-item-text">
               <p class="space-name">Zuri Hub</p>
@@ -201,8 +195,26 @@
               <i class="fas fa-star"></i>
             </div>
           </div>
-        
-          
+        </div></a>
+      </div>
+    </section>
+    <section class="experience">
+      <div class="experience__container">
+        <h2>Finding a space has never been easier!</h2>
+        <div class="experience__container-body">
+          <h5><i class="fas fa-check"></i> Simple and easy to use</h5>
+          <!-- <hr class="experience__line"> -->
+          <p>With Spaces, searching for workspaces in your area is now hassle free.<br> 
+            Find spaces with the facilities you need and the right budget.</p>
+             <h5><i class="fas fa-shield-alt"></i> Tested and trusted spaces</h5>
+             <!-- <hr class="experience__line"> -->
+             <p>Your security is our priority. We have validated the workspaces <br> on our site and they are safe and ready to use.<br>
+              <h5><i class="fas fa-user"></i> Sign up with us</h5>
+              <!-- <hr class="experience__line"> -->
+              <p>To view details of spaces, sign up with us. <br>
+                 It is absolutely FREE!</p>
+                 <button><a href="signup.html">Sign up</a></button>
+
         </div>
       </div>
     </section>
@@ -213,13 +225,22 @@
         </h3>
         <div class="main__container__features">
           <div class="main__container__feature">
-            <img src="/assets/img/paystack.png" alt="" />
+            <img src="assets/img/zuri.png" alt="" />
           </div>
           <div class="main__container__feature">
-            <img src="/assets/img/unnamed 1.png" alt="" />
+            <img src="assets/img/i4g.png" alt="" />
           </div>
           <div class="main__container__feature">
-            <img src="/assets/img/CCHUB-logo 1.png" alt="" />
+            <img src="assets/img/paystack.png" alt="" />
+          </div>
+          <div class="main__container__feature">
+            <img src="assets/img/unnamed 1.png" alt="" />
+          </div>
+          <div class="main__container__feature">
+            <img src="assets/img/hng.png" alt="" />
+          </div>
+          <div class="main__container__feature">
+            <img src="assets/img/CCHUB-logo 1.png" alt="" />
           </div>
         </div>
       </div>
@@ -229,13 +250,6 @@
       <div class="testimonies__details">
         <div class="test-wrap">
           <div class="testimonies__container">
-            <!-- <div class="testimonies__image">
-              <img
-                src="/assets/img/office1.jpg"
-                alt=""
-                
-              />
-            </div> -->
             <div class="testimonies__text">
               <p class="testimonies__text__content">
                 Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
@@ -250,13 +264,6 @@
         </div>
         <div class="test-wrap">
           <div class="testimonies__container">
-            <!-- <div class="testimonies__image">
-              <img
-                src="/assets/img/office2.jpg"
-                alt=""
-                
-              />
-            </div> -->
             <div class="testimonies__text">
               <p class="testimonies__text__content">
               Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
@@ -271,13 +278,6 @@
         </div>
         <div class="test-wrap">
           <div class="testimonies__container">
-            <!-- <div class="testimonies__image">
-              <img
-                src="/assets/img/office3.jpg"
-                alt=""
-                
-              />
-            </div> -->
             <div class="testimonies__text">
               <p class="testimonies__text__content">
                 My team and I were looking for a space to have meetings and that was when we found Spaces.NG. It was an incredible experience and they also ensure that the space on the platform are secure and of high quality. Kudos
@@ -292,13 +292,6 @@
         </div>
         <div class="test-wrap">
           <div class="testimonies__container">
-            <!-- <div class="testimonies__image">
-              <img
-                src="/assets/img/office1.jpg"
-                alt=""
-                
-              />
-            </div> -->
             <div class="testimonies__text">
               <p class="testimonies__text__content">
                 Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
@@ -313,13 +306,6 @@
         </div>
         <div class="test-wrap">
           <div class="testimonies__container">
-            <!-- <div class="testimonies__image">
-              <img
-                src="/assets/img/office2.jpg"
-                alt=""
-                
-              />
-            </div> -->
             <div class="testimonies__text">
               <p class="testimonies__text__content">
               Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
@@ -350,8 +336,8 @@
           <div class="site-links">
             <h3>Site Links</h3>
             <ul>
-              <li><i class="fas fa-arrow-alt-circle-right"></i>About Us</li>
-              <li><i class="fas fa-arrow-alt-circle-right"></i>Contact Us</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i> <a href="aboutus.html"> About Us</li></a>
+              <li><i class="fas fa-arrow-alt-circle-right"></i><a href="contactus.html"> Contact Us</li></a>
             </ul>
           </div>
           <div class="legal">
@@ -381,6 +367,6 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="/assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
