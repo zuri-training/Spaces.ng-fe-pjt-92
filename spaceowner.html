@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/spaceowner.css" />
+    <title>Register your space with us and let others find it | Spaces.Ng</title>
+  </head>
+  <body>
+    <div class="header-components">
+      <header>
+        <div class="logo">
+          <p class="logo-name"><a href="index.html"> Spaces.NG</a></p>
+        </div>
+        <div class="nav-wrap">
+          <nav>
+            <ul>
+              <li><a href="aboutus.html"> About Us</li></a>
+              <li><a href="contactus.html"> Contact Us</li></a>
+              <button class="register-btn"><a href="spaceowner.html">Do you have a space?</a></button>
+            </ul>
+          </nav>
+          <div class="user" id = "user">   
+            <i class="far fa-user-circle"></i>
+            <ul class="dropdown">
+              <li><a href="signup.html">Sign up</a></li>
+              <li><a href="signin.html">Sign in</a></li>
+            </ul>
+          </div>
+          <div id="menu-icon">
+            <div class="bar" id="bars" onclick="lockScroll();"></div>
+          </div>
+        </div>
+        
+      </header>
+      <div id = "mobile-nav">
+        <ul id="mobile-nav-links">
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="spaceowner.html">Register a Space</a></li>
+          <!-- <li><a href="dashboard.html">Find a Space</a></li> -->
+        </ul>
+      </div>
+  </div>
+
+  <div class="main-wrap">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="spaceowner.html">Do you have a space?</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <form action="#">
+        <h1>Do you have a space?</h1>
+        <h4>Submit your space for listing on our website</h4>
+        <section class="info">
+          <div class="basic-info">
+            <input type="text" placeholder="Name of space">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Space description"></textarea>
+            <div class="facilities">
+              <h3>Facilities</h3>
+              <div class="checkbox-wrap">
+                <div class="checkbox-item">
+                  <input type="checkbox" name="waiting-room" id="waiting-room">
+                  <p>Waiting room</p>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="Parking" id="Parking">
+                  <p>Parking</p>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="wifi" id="wifi">
+                  <p>Wifi</p>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="whiteboard" id="whiteboard">
+                  <p>Whiteboard</p>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="flat-screen" id="flat-screen">
+                  <p>Flat Screen Tv</p>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="restuarant" id="restuarant">
+                  <p>Restuarant</p>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="Ensuite Kitchenette" id="Ensuite Kitchenette">
+                  <p>Waiting room</p>
+                </div>
+                
+              </div>
+              <div class="other-facilities">
+                <input type="text" id="other-facilities" placeholder="Other Facilities">
+                <button class="add">Add</button>
+              </div>
+              
+            </div>
+          </div>
+          <div class="other">
+            <div class="upload">
+              <div class="img-block">
+                <i class="fas fa-images"></i>
+              </div>
+              <button>Upload thumbnail</button>
+            </div>
+            <div class="select-item">
+              <label for="capacity">Space capacity</label>
+              <select name="capacity" id="capacity">
+                <option value="1-4">1-4</option>
+                <option value="5-9">5-9</option>
+                <option value="10-14">10-14</option>
+                <option value="15-19">15-19</option>
+                <option value="20-29">20-29</option>
+                <option value="30+">30+</option>
+              </select>
+            </div>
+            
+            <label for="price">Price</label>
+            <input type="text" placeholder="Price per hour(N)">
+            
+          </div>
+        </section>
+        <section class="contact-info">
+          <h2>Add Contact Information</h2>
+          <input type="text" placeholder="Add State">
+          <input type="text" placeholder="Add LGA">
+          <input type="text" placeholder="Add Street Address">
+          <input type="text" placeholder="Add Phone">
+          <input type="text" placeholder="Add Email">
+          Add Social Media Accounts
+          <input type="text" placeholder="Twitter">
+          <input type="text" placeholder="Instagram">
+          <input type="text" placeholder="Facebook">
+          <button id="submit"><a href="spaceregistered.html">SUBMIT</a></button>
+        </section>
+        
+        
+      </form>
+    </div>
+  </div>
+  <div class="footer-component">
+    <footer>
+      <div class="footer-wrap">
+        <div class="footer-info">
+          <p class="logo-name">Spaces.NG</p>
+          <div class="contact">
+            <p><i class="fas fa-envelope"></i>spacesng@gmail.com</p>
+            <p class="bold-icon"><i class="fas fa-phone-alt"></i>08050040020</p>
+            <p class="app"><i class="fab fa-android"></i><a href=""> Download our Android app</a></p>
+            <p class="app"><i class="fab fa-apple"></i><a href="">Download our IOS app</a></p>
+          </div>
+        </div>
+        <div class="site-links">
+          <h3>Site Links</h3>
+          <ul>
+            <li><i class="fas fa-arrow-alt-circle-right"></i><a href="aboutus.html">About Us</a></li>
+          
+            <li><i class="fas fa-arrow-alt-circle-right"></i><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="legal">
+          <h3>Legal</h3>
+          <ul>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Terms & conditions</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>License Agreement</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Privacy Policy</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Copyright Information</li>
+            <li><i class="fas fa-arrow-alt-circle-right"></i>Cookies Policy</li>
+          </ul>       
+        </div>
+        <div>
+          <h3>Social Links</h3>
+          <ul class="social">
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-twitter"></i></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+      <div class="pjt-92">
+        <p>Designed by PJT-92 Team</p>
+      </div>
+  </div>
+    <script src="assets/js/spaceowner.js"></script>
+  </body>
+</html>

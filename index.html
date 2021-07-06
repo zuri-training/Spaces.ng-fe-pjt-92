@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="assets/css/slick.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <title>Welcome to Spaces.NG | Find a Space that suits you</title>
+  </head>
+  <body>
+    <div class="header-components">
+      <header> 
+        <div class="logo">
+          <p class="logo-name"><a href="#"> Spaces.NG</a></p>
+        </div>
+        <div class="nav-wrap">
+          <nav>
+            <ul>
+              <li><a href="#"> About Us</li></a>
+              <li><a href="#"> Contact Us</li></a>
+              <button class="register-btn"><a href="#">Do you have a space?</a></button>
+            </ul>
+          </nav>
+          <div class="user" id = "user">   
+            <i class="far fa-user-circle"></i>
+            <ul class="dropdown">
+              <li><a href="signup.html">Sign up</a></li>
+              <li><a href="signin.html">Sign in</a></li>
+            </ul>
+          </div>
+          <div id="menu-icon">
+            <div class="bar" id="bars" onclick="lockScroll();"></div>
+            <!-- <i class="far fa-user-circle"></i> -->
+          </div>
+        </div>
+        
+      </header>
+      <div id = "mobile-nav">
+        <ul id="mobile-nav-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Register a Space</a></li>
+          <li><a href="#">Find a Space</a></li>
+        </ul>
+      </div>
+    </div>
+    <section class="intro" id="home">
+      <div class="intro__container">
+        <h3 class="intro__heading">
+          <span>Find</span> The Most Efficient and Reliable
+          <span>Working</span> Space Near You.
+        </h3>
+      </div>
+      <form action="">
+        <div class="country form-item">
+          <label>Select a Country</label>
+          <select name="Select a Country" id="country">
+            <option value="Nigeria">Nigeria</option>
+          </select>
+        </div>
+        <div class="state form-item">
+          <label>Select a State</label>
+          <select name="Select a State" id="state-dropdown">
+            <option value="">Select a state</option>
+           
+          </select>
+        </div>
+        <div class="city form-item">
+          <label>Select L.G.A</label>
+          <select name="Select a City" id="lga-dropdown">
+            <option value="">Select L.G.A</option>
+          </select>
+        </div>
+        <button id="submit"><a href="dashboard.html">Find Space</a></button>
+      </form>
+    </section>
+    <section class="intro__items">
+      <div class="intro__item">
+        <span class="intro__item__image">
+          <img src="/assets/img/wifi.png" alt="" />
+        </span>
+        <h3 class="intro__item__name">24/7 Internet</h3>
+        <p class="intro__item__details">Enjoy unfettered internet service</p>
+      </div>
+      <div id="border__right"></div>
+      <div class="intro__item">
+        <span class="intro__item__image">
+          <img src="/assets/img/flash-outline.png" alt="" />
+        </span>
+        <h3 class="intro__item__name">Steady power supply</h3>
+        <p class="intro__item__details">Enjoy uninterrupted power supply</p>
+      </div>
+      <div id="border__right" class="none"></div>
+      <div class="intro__item">
+        <span class="intro__item__image">
+          <img src="/assets/img/fast-food-outline.png" alt="" />
+        </span>
+        <h3 class="intro__item__name">Refreshments</h3>
+        <p class="intro__item__details">
+          Quality refreshments promote productivity
+        </p>
+      </div>
+      <div id="border__right"></div>
+      <div class="intro__item">
+        <span class="intro__item__image">
+          <img src="/assets/img/barbell-outline.png" alt="" />
+        </span>
+        <h3 class="intro__item__name">Workout Facilities</h3>
+        <p class="intro__item__details">
+         Facilities to keep you fit and healthy.
+        </p>
+      </div>
+    </section>
+    <section class="featured__spaces">
+      <h3>FEATURED SPACES</h3>
+      <div class="featured__spaces__wrap">
+        <div class="spaces-wrap">
+          <div class="spaces-item">
+            <img src="assets/img/hub-one.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Hub One</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">4.8</p>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="spaces-wrap">
+        
+            <div class="spaces-item">
+              <img src="assets/img/normadians.png" alt="" />
+              <div class="space-item-text">
+                <p class="space-name">Kolab </p>
+                <p class="space-item-location">
+                  <i class="fas fa-map-marker-alt"></i> Kaduna, Nigeria.
+                </p>
+              </div>
+              <div class="ratings">
+                <p class="rating-value">5.0</p>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+        
+         
+        </div>
+        <div class="spaces-wrap">
+          
+            <div class="spaces-item">
+              <img src="assets/img/vibranium-valley.png" alt="" />
+              <div class="space-item-text">
+                <p class="space-name">nHub Nigeria</p>
+                <p class="space-item-location">
+                  <i class="fas fa-map-marker-alt"></i> Plateau, Nigeria.
+                </p>
+              </div>
+              <div class="ratings">
+                <p class="rating-value">5.0</p>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+        
+          
+        </div>
+        <div class="spaces-wrap">
+        
+            <div class="spaces-item">
+              <img src="assets/img/work-central.png" alt="" />
+              <div class="space-item-text">
+                <p class="space-name">andela</p>
+                <p class="space-item-location">
+                  <i class="fas fa-map-marker-alt"></i> Lagos, Nigeria.
+                </p>
+              </div>
+              <div class="ratings">
+                <p class="rating-value">5.0</p>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          
+         
+        </div>
+        <div class="spaces-wrap">
+          
+            <div class="spaces-item">
+            <img src="assets/img/lead-space.png" alt="" />
+            <div class="space-item-text">
+              <p class="space-name">Zuri Hub</p>
+              <p class="space-item-location">
+                <i class="fas fa-map-marker-alt"></i> Abuja, Nigeria.
+              </p>
+            </div>
+            <div class="ratings">
+              <p class="rating-value">4.8</p>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        
+          
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="main__container">
+        <h3 class="main__container__heading">
+          Spaces for Nigeria's Largest Techies
+        </h3>
+        <div class="main__container__features">
+          <div class="main__container__feature">
+            <img src="/assets/img/paystack.png" alt="" />
+          </div>
+          <div class="main__container__feature">
+            <img src="/assets/img/unnamed 1.png" alt="" />
+          </div>
+          <div class="main__container__feature">
+            <img src="/assets/img/CCHUB-logo 1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonies">
+      <h3 class="testimonies__heading">Testimonials</h3>
+      <div class="testimonies__details">
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office1.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+                Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Candice Adeshina</p>
+                <p>Designer, Google Nigeria.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office2.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+              Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Andy Ameobi</p>
+                <p>Freelancer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office3.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+                My team and I were looking for a space to have meetings and that was when we found Spaces.NG. It was an incredible experience and they also ensure that the space on the platform are secure and of high quality. Kudos
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Amanda Amaefule</p>
+                <p>CEO, Every Woman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office1.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+                Spaces.NG not only helped me to find an incredible space, it also helped me make very important connections that have boosted my career. The platform is seamless and extremely effective. 
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Candice Adeshina</p>
+                <p>Designer, Google Nigeria.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="test-wrap">
+          <div class="testimonies__container">
+            <!-- <div class="testimonies__image">
+              <img
+                src="/assets/img/office2.jpg"
+                alt=""
+                
+              />
+            </div> -->
+            <div class="testimonies__text">
+              <p class="testimonies__text__content">
+              Spaces.NG really solved a huge problem for me. As a freelancer, finding good spaces are important to me and with the current light situation, Spaces.NG is my best friend
+              </p>
+              <div class="client__name">
+                <div class="line"></div>
+                <p>Andy Ameobi</p>
+                <p>Freelancer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer-component">
+      <footer>
+        <div class="footer-wrap">
+          <div class="footer-info">
+            <p class="logo-name">Spaces.NG</p>
+            <div class="contact">
+              <p><i class="fas fa-envelope"></i>spacesng@gmail.com</p>
+              <p class="bold-icon"><i class="fas fa-phone-alt"></i>08050040020</p>
+              <p class="app"><i class="fab fa-android"></i><a href=""> Download our Android app</a></p>
+            <p class="app"><i class="fab fa-apple"></i>Download our IOS app</p>
+            </div>
+            
+          </div>
+          <div class="site-links">
+            <h3>Site Links</h3>
+            <ul>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>About Us</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Contact Us</li>
+            </ul>
+          </div>
+          <div class="legal">
+            <h3>Legal</h3>
+            <ul>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Terms & conditions</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>License Agreement</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Privacy Policy</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Copyright Information</li>
+              <li><i class="fas fa-arrow-alt-circle-right"></i>Cookies Policy</li>
+            </ul>       
+          </div>
+          <div>
+            <h3>Social Links</h3>
+            <ul class="social">
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-facebook"></i></li>
+              <li><i class="fab fa-twitter"></i></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="pjt-92">
+        <p>Designed by PJT-92 Team</p>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>
