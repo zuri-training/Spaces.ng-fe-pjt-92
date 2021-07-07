@@ -53,7 +53,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   color: white;
   padding: 0 50px 0 40px;
   z-index: 10;
@@ -99,7 +99,8 @@ ul.dropdown li {
 ul.dropdown li:last-child {
   border-top: 1px solid rgb(169, 181, 182);
 }
-.user:hover ul.dropdown {
+.user:hover ul.dropdown,
+.user:focus ul.dropdown {
   display: block;
   position: absolute;
   top: 0;
@@ -268,7 +269,7 @@ nav ul button {
   height: calc(100vh - 100px);
   max-height: 520px;
   max-width: 1600px;
-  margin: 120px auto 30px;
+  margin: 90px auto 30px;
   padding: 0 70px;
   display: flex;
   align-items: center;
@@ -324,9 +325,9 @@ nav ul button {
   display: flex;
   width: 100%;
   min-width: 500px;
-  height: 50px;
+  height: 45px;
   align-items: center;
-  padding: 0.25rem 1rem;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 .form-input {
@@ -347,20 +348,25 @@ nav ul button {
   background-color: transparent;
 }
 .form-input-container:hover {
-  border: 1px solid #4623d2;
+  /* border: 1px solid #563bc5; */
 }
-
+#message {
+  display: none;
+  height: 20px;
+  background-color: black;
+  margin: 10px 0 -10px;
+}
 .btn-signup {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   color: #ffffff;
-  height: 50px;
+  height: 45px;
   background: #4623d2;
   border: 2.5px solid rgba(0, 0, 0, 0.2);
   box-shadow: 3.2px 16px 40px rgba(96, 57, 251, 0.3);
-  border-radius: 12.5px;
+  border-radius: 5px;
   width: 100%;
   /* max-width: 550px; */
   display: block;
@@ -371,6 +377,8 @@ nav ul button {
 .select {
   display: flex;
   margin-top: 1rem;
+  align-items: center;
+  /* justify-content: center; */
 }
 .form-agreement {
   font-family: Roboto;
@@ -379,15 +387,13 @@ nav ul button {
   font-size: 14px;
   line-height: 26px;
   letter-spacing: 0.05em;
-  color: #000000;
-  opacity: 0.4;
+  color: #000;
 }
 .check {
   margin-right: 1rem;
-  margin-top: 8px;
-  padding: 1.4rem;
+  /* margin-top: 8px; */
+  /* padding: 1.4rem; */
   background: #ffffff;
-  opacity: 0.4;
   border: 4.5px solid #000000;
   border-radius: 6.25px;
 }
@@ -399,10 +405,12 @@ nav ul button {
 .form-img {
   width: 100%;
   height: 100%;
+  max-height: 520px;
+  border-radius: 5px;
 }
 .signin {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .blue-link {
   color: blue;
@@ -460,6 +468,7 @@ footer ul li {
 }
 footer ul li:hover {
   color: white;
+  cursor: pointer;
 }
 footer ul.social {
   display: flex;
@@ -475,6 +484,7 @@ footer ul.social li i {
 footer ul.social li i:hover {
   padding: 0;
   color: #8396bb;
+  cursor: pointer;
 }
 .pjt-92 {
   background-color: #1a027b;
@@ -585,7 +595,8 @@ footer ul.social li i:hover {
     justify-content: center;
     align-items: center;
     margin: 70px 0 0;
-    height: calc(100vh - 90px);
+    height: 100%;
+    /* height: calc(100vh - 90px); */
     max-height: 700px;
     min-height: 500px;
     position: relative;
@@ -593,24 +604,32 @@ footer ul.social li i:hover {
   }
 
   .form-container {
-    width: 95%;
+    width: 100%;
     max-width: 700px;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.9);
     margin: 0 auto;
     min-width: unset;
     padding: 20px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    height: 100%;
+    /* display: none; */
   }
   .form-title h2 {
     font-size: 28px;
+    margin: 0;
   }
   .img-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    /* height: 550px; */
     max-height: unset;
+  }
+  .form-img {
+    height: 100%;
+    max-height: none;
+    opacity: 0.9;
   }
 }

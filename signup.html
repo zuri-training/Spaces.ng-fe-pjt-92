@@ -32,7 +32,7 @@
           </ul>
         </div>
         <div id="menu-icon">
-          <div class="bar" id="bars" onclick="lockScroll();"></div>
+          <div class="bar" id="bars"></div>
         </div>
       </div>
       
@@ -67,14 +67,12 @@
         </div>
         <div class="form-input-container">
         <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" class="form-input" id="password" required>
-        <span id='message'></span>
-      
+        <input type="password" placeholder="Password" class="form-input" id="password" required>      
         </div>
+        <p id='message'></p>
         <div class="form-input-container">
-            <i class="far fa-eye"></i>
+            <i class="fas fa-lock"></i>
             <input type="password" placeholder="Confirm password" class="form-input" id="confirm"required>
-            <span id='message'></span>
           </div>
       
 
@@ -84,7 +82,7 @@
 
 
           <input type="checkbox" id="agreement" name="agreeement" value="Bike" class="check">
-          <label for="agreement" class="form-agreement"> I agree with all terms and conditions</label>
+          <p class="form-agreement"> I agree with all terms and conditions</p>
         </div>
           
         <p class="signin">Already have an account, <span class="blue-link"><a href="signin.html">Sign In</a></span></p>

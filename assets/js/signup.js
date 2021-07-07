@@ -7,6 +7,7 @@ const links = document.querySelectorAll('#mobile-nav-links li');
 const bar = document.getElementById('bars')
 
 menuIcon.addEventListener('click', () => { 
+    document.body.classList.toggle('lock-scroll');
     bar.classList.toggle('rotate')
     mobileNav.classList.toggle('open')
     if(mobileNav.classList.contains('bg-overlay')){
@@ -16,19 +17,6 @@ menuIcon.addEventListener('click', () => {
     }
     linksContainer.classList.toggle('nav-animation')
 })
-function lockScroll() {
-    document.body.classList.toggle('lock-scroll');
-}
-
-
-
-var checkP = function(){
-    if (document.getElementById('password').value=== document.getElementById('confirm').value){
-        document.getElementById('message').style.color = 'green';
-        document.getElementById('message').innerHTML ='matching';
-    }else{
-        document.getElementById('message').style.color = 'red';
-        document.getElementById('message').innerHTML ='not matching';
-    }
-}
-
+// function lockScroll() {
+//     document.body.classList.toggle('lock-scroll');
+// }
