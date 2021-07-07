@@ -7,6 +7,7 @@ const links = document.querySelectorAll('#mobile-nav-links li');
 const bar = document.getElementById('bars')
 
 menuIcon.addEventListener('click', () => { 
+    document.body.classList.toggle('lock-scroll');
     bar.classList.toggle('rotate')
     mobileNav.classList.toggle('open')
     if(mobileNav.classList.contains('bg-overlay')){
@@ -16,125 +17,125 @@ menuIcon.addEventListener('click', () => {
     }
     linksContainer.classList.toggle('nav-animation')
 })
-function lockScroll() {
-    document.body.classList.toggle('lock-scroll');
-}
+// function lockScroll() {
+//     document.body.classList.toggle('lock-scroll');
+// }
 
 
 
 
-const submitBtn= document.querySelector('.login__btn');
-const email= document.querySelector('.email');
-const password= document.querySelector('.password');
-const emailError= document.querySelector('.email__error');
-const passwordError=document.querySelector('.password__error');
-const emailCheck= document.querySelector('.email_check');
-const emailExclamation= document.querySelector('.email_exclamation');
-const passwordCheck= document.querySelector('.password_check');
-const passwordExclamation= document.querySelector('.password_exclamation');
-const form=document.querySelector('.login__form')
+// const submitBtn= document.querySelector('.login__btn');
+// const email= document.querySelector('.email');
+// const password= document.querySelector('.password');
+// const emailError= document.querySelector('.email__error');
+// const passwordError=document.querySelector('.password__error');
+// const emailCheck= document.querySelector('.email_check');
+// const emailExclamation= document.querySelector('.email_exclamation');
+// const passwordCheck= document.querySelector('.password_check');
+// const passwordExclamation= document.querySelector('.password_exclamation');
+// const form=document.querySelector('.login__form')
 
-//VERIFICATION FOR EACH INPUT
-const emailInput=document.forms['form']['email'];
-const passwordInput=document.forms['form']['password'];
+// //VERIFICATION FOR EACH INPUT
+// const emailInput=document.forms['form']['email'];
+// const passwordInput=document.forms['form']['password'];
 
-emailInput.addEventListener('textInput',verifyEmail());
+// emailInput.addEventListener('textInput',verifyEmail());
 
-function verifyEmail(){
-    if(email.value.length>=8){
-        setSuccessMessage(emailValue)
-    }
-}
+// function verifyEmail(){
+//     if(email.value.length>=8){
+//         setSuccessMessage(emailValue)
+//     }
+// }
 
-passwordInput.addEventListener('textInput',verifyPassword());
+// passwordInput.addEventListener('textInput',verifyPassword());
 
-function verifyPassword(){
-    if(password.value.length>5){
-        setPasswordSuccess();
-    }
-}
-//ENDS HERE
+// function verifyPassword(){
+//     if(password.value.length>5){
+//         setPasswordSuccess();
+//     }
+// }
+// //ENDS HERE
 
-//SUBMIT VERIFICATION
-form.addEventListener('change',(e)=>{
-    // e.preventDefault();
-    checkInputElements();
-})
+// //SUBMIT VERIFICATION
+// form.addEventListener('change',(e)=>{
+//     // e.preventDefault();
+//     checkInputElements();
+// })
 
-function checkInputElements(){
-    const emailValue=email.value.trim();
-    const passwordValue=password.value.trim();
+// function checkInputElements(){
+//     const emailValue=email.value.trim();
+//     const passwordValue=password.value.trim();
 
-    if(emailValue===''){
-        setErrorMessage();
-    }
-    else if(!emailValue){
-        setErrorMessage();
-        emailError.textContent='Incorrect email address'
-    }
-    else{
-        setSuccessMessage(emailValue);
+//     if(emailValue===''){
+//         setErrorMessage();
+//     }
+//     else if(!emailValue){
+//         setErrorMessage();
+//         emailError.textContent='Incorrect email address'
+//     }
+//     else{
+//         setSuccessMessage(emailValue);
         
-    }
-    if(passwordValue===''){
-        const parent= document.querySelector('.input__section');
-        setPasswordError()
+//     }
+//     if(passwordValue===''){
+//         const parent= document.querySelector('.input__section');
+//         setPasswordError()
 
-    }
-    else if(passwordValue.length<5){
-        setPasswordError()
-        passwordError.textContent='Incorrect password'
-    }else if(passwordValue.includes()){
+//     }
+//     else if(passwordValue.length<5){
+//         setPasswordError()
+//         passwordError.textContent='Incorrect password'
+//     }else if(passwordValue.includes()){
 
-    }
-    else{
-        setPasswordSuccess();
-    }
-
-
-}
+//     }
+//     else{
+//         setPasswordSuccess();
+//     }
 
 
+// }
 
 
 
 
-//EMAIL ERROR FUNCTION
-function setErrorMessage(){
-    emailError.style.display='block'
-    email.style.borderColor= 'red';
-    emailExclamation.style.display='block';
-    emailCheck.style.display='none';
-}
-//EMAIL SUCCESS MESSAGE
-function setSuccessMessage(email){
-    if(email){
-        const email= document.querySelector('.email');
-        emailError.style.display='none';
-        email.style.borderColor= 'green';
-        emailExclamation.style.display='none';
-        emailCheck.style.display='block';
-    }
+
+
+// //EMAIL ERROR FUNCTION
+// function setErrorMessage(){
+//     emailError.style.display='block'
+//     email.style.borderColor= 'red';
+//     emailExclamation.style.display='block';
+//     emailCheck.style.display='none';
+// }
+// //EMAIL SUCCESS MESSAGE
+// function setSuccessMessage(email){
+//     if(email){
+//         const email= document.querySelector('.email');
+//         emailError.style.display='none';
+//         email.style.borderColor= 'green';
+//         emailExclamation.style.display='none';
+//         emailCheck.style.display='block';
+//     }
         
-}
+// }
 
 
-//PASSWORD ERROR MESSAGE
-function setPasswordError(){
-    passwordError.style.display='';
-    password.style.borderColor= 'red';
-    passwordError.style.display='block'
-    password.style.borderColor= 'red';
-    passwordExclamation.style.display='block';
-    passwordCheck.style.display='none';
-}
-//PASSWORD SUCCESS
-function setPasswordSuccess(){
-    passwordError.style.display='';
-    password.style.borderColor= 'green';
-    passwordCheck.style.display='block';
-    passwordExclamation.style.display='none';
-}
+// //PASSWORD ERROR MESSAGE
+// function setPasswordError(){
+//     passwordError.style.display='';
+//     password.style.borderColor= 'red';
+//     passwordError.style.display='block'
+//     password.style.borderColor= 'red';
+//     passwordExclamation.style.display='block';
+//     passwordCheck.style.display='none';
+// }
+// //PASSWORD SUCCESS
+// function setPasswordSuccess(){
+//     passwordError.style.display='';
+//     password.style.borderColor= 'green';
+//     passwordCheck.style.display='block';
+//     passwordExclamation.style.display='none';
+// }
 
 // MODAL
 const modal = document.getElementById('logout-modal')

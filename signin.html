@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/signin.css" />
+    <link rel="stylesheet" href="assets/css/signin.css" />
   </head>
   <body>
     <div class="header-components">
@@ -70,7 +70,7 @@
             name="email"
             class="form__input email"
             autofocus
-            placeholder="Email address"
+            placeholder="Email address or Username"
           />
           <i class="email_check fas fa-check-circle"></i>
           <i class="email_exclamation fas fa-exclamation-circle"></i>
@@ -106,7 +106,7 @@
         <div class="form__text">
           <p class="link__text">
             Don't have an account yet?
-            <a href="siginup.html" class="other-links">Sign up</a>
+            <a href="signup.html" class="other-links">Sign up</a>
           </p>
         </div>
       </form>
@@ -122,7 +122,8 @@
       <div class="modal">
         <p>Are you sure you want to log out?</p>
         <form action="#">
-          <input type="submit" value="logout" id="logout">
+          <input type="submit" value="yes, log out" id="logout">
+          <input type="submit" value="No" id="cancel-logout">
         </form>
         <div class="modal-close">
           <p>x</p>
@@ -175,6 +176,6 @@
             <p>Designed by PJT-92 Team</p>
           </div>
       </div>
-    <script src="/assets/js/signin.js"></script>
+    <script src="assets/js/signin.js"></script>
   </body>
 </html>
