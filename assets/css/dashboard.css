@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "Lato";
+  font-family: "Roboto";
 }
 body {
   margin: 0;
@@ -53,7 +53,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   color: white;
   padding: 0 50px 0 40px;
   z-index: 10;
@@ -99,7 +99,8 @@ ul.dropdown li {
 ul.dropdown li:last-child {
   border-top: 1px solid rgb(169, 181, 182);
 }
-.user:hover ul.dropdown {
+.user:hover ul.dropdown,
+.user:focus ul.dropdown {
   display: block;
   position: absolute;
   top: 0;
@@ -271,7 +272,7 @@ nav ul button {
 .main {
   width: 95%;
   max-width: 1600px;
-  margin: 120px auto 0;
+  margin: 90px auto 0;
 }
 /* BREADCRUMB STYLES */
 .breadcrumb ul {
@@ -383,6 +384,7 @@ select:focus {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* END OF FORM STYLES */
@@ -683,6 +685,7 @@ footer ul li {
 }
 footer ul li:hover {
   color: white;
+  cursor: pointer;
 }
 footer ul.social {
   display: flex;

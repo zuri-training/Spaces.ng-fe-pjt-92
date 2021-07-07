@@ -6,6 +6,7 @@ const links = document.querySelectorAll('#mobile-nav-links li');
 const bar = document.getElementById('bars')
 
 menuIcon.addEventListener('click', () => { 
+    document.body.classList.toggle('lock-scroll')
     bar.classList.toggle('rotate')
     mobileNav.classList.toggle('open')
     if(mobileNav.classList.contains('bg-overlay')){
@@ -15,9 +16,9 @@ menuIcon.addEventListener('click', () => {
     }
     linksContainer.classList.toggle('nav-animation')
 })
-function lockScroll() {
-    document.body.classList.toggle('lock-scroll');
-}
+// function lockScroll() {
+//     document.body.classList.toggle('lock-scroll');
+// }
 
 
 // POPULATING THE FORM WITH STATES AND LGAS
@@ -120,7 +121,8 @@ const spacesItem = document.querySelectorAll('.spaces-item')
 function likeBtn (){
     [...spacesItem].forEach((item) => {
         let like = item.children[2]
-        like.addEventListener('click', () => {
+        like.addEventListener('click', (e) => {
+            e.preventDefault()
             if (like.innerHTML === '<i class="far fa-heart"></i>'){
                 like.innerHTML = '<i class="fas fa-heart liked"></i>';
             }
