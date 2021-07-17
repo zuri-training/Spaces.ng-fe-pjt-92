@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "Lato";
+  font-family: "Roboto";
 }
 body {
   margin: 0;
@@ -53,7 +53,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 80px;
   color: white;
   padding: 0 50px 0 40px;
   z-index: 10;
@@ -99,7 +99,8 @@ ul.dropdown li {
 ul.dropdown li:last-child {
   border-top: 1px solid rgb(169, 181, 182);
 }
-.user:hover ul.dropdown {
+.user:hover ul.dropdown,
+.user:focus ul.dropdown {
   display: block;
   position: absolute;
   top: 0;
@@ -271,7 +272,7 @@ nav ul button {
 .main {
   width: 95%;
   max-width: 1600px;
-  margin: 120px auto 0;
+  margin: 90px auto 0;
 }
 /* BREADCRUMB STYLES */
 .breadcrumb ul {
@@ -383,6 +384,7 @@ select:focus {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* END OF FORM STYLES */
@@ -518,9 +520,9 @@ section.results {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.spaces-item {
+a .spaces-item {
   width: 45%;
-  min-width: 300px;
+  min-width: 350px;
   max-width: 400px;
   height: 350px;
   background-color: black;
@@ -530,7 +532,7 @@ section.results {
   margin: 0 0 50px;
   box-shadow: 5px 5px 10px rgba(75, 87, 87, 0.5);
 }
-.spaces-item:after {
+a .spaces-item:after {
   content: "";
   position: absolute;
   height: 100%;
@@ -538,10 +540,10 @@ section.results {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.247);
 }
-.spaces-item:hover:after {
+a .spaces-item:hover:after {
   display: none;
 }
-.spaces-item img {
+a .spaces-item img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -552,26 +554,26 @@ section.results {
   object-fit: cover;
   /* display: none; */
 }
-.spaces-item .space-item-text {
+a .spaces-item .space-item-text {
   position: absolute;
   bottom: 15px;
   left: 15px;
   z-index: 3;
 }
-.space-name {
+a .space-name {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
   max-width: 200px;
 }
-.space-item-location {
+a .space-item-location {
   font-size: 14px;
 }
-.space-item-location i {
+a .space-item-location i {
   font-size: 18px;
   margin-right: 5px;
 }
-.spaces-item .like-icon {
+a .spaces-item .like-icon {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -683,6 +685,7 @@ footer ul li {
 }
 footer ul li:hover {
   color: white;
+  cursor: pointer;
 }
 footer ul.social {
   display: flex;
@@ -806,10 +809,10 @@ footer ul.social li i:hover {
   .open-filter {
     /* display: block; */
   }
-  .spaces-item:after {
+  a .spaces-item:after {
     background-color: rgba(0, 0, 0, 0.2);
   }
-  .spaces-item:hover:after {
+  a .spaces-item:hover:after {
     display: initial;
   }
   footer {
@@ -906,7 +909,7 @@ footer ul.social li i:hover {
   .sort p {
     font-size: 14px;
   }
-  .spaces-item {
+  a .spaces-item {
     width: 90%;
     margin: 0 auto 20px;
     height: 300px;

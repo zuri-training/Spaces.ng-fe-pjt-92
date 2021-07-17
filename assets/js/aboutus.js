@@ -1,4 +1,3 @@
-// HEADER STYLES
 // MOBILE NAV MENU
 const menuIcon = document.getElementById('menu-icon');
 const mobileNav = document.getElementById('mobile-nav');
@@ -20,3 +19,4 @@ menuIcon.addEventListener('click', () => {
 // function lockScroll() {
 //     document.body.classList.toggle('lock-scroll');
 // }
+

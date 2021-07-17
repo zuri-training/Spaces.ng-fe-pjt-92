@@ -1,34 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@300;400;500;700&display=swap");
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 :root {
-  --background-color: #eef1f1;
+  --background-color: #e5e5e5;
   --interface-color: #4623d2;
   --error-message: red;
   --success-message: rgb(30, 226, 30);
   --border-radius: 12.5px;
 }
-/* * {
-  box-sizing: border-box;
-} */
-body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* height: 90vh; */
-  background-color: var(--background-color);
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  position: relative;
-  /* overflow: hidden; */
-}
-/* HEADER STYLES */
 
+/* HEADER STYLES */
+body {
+  width: 100%;
+}
 h1,
 h2,
 h3,
@@ -284,172 +270,213 @@ nav ul button {
 }
 
 /* END */
+
+body {
+  height: 100%;
+  background-color: var(--background-color);
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: white;
+}
+.contact__nav {
+  margin-top: 90px;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.contact__nav li {
+  display: inline;
+}
+.contact__nav li:first-child:after {
+  content: ">";
+  margin: 0 10px;
+  font-weight: bold;
+}
+.image__container {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(rgba(0, 0, 0, 0.411), rgba(0, 0, 0, 0.5)),
+    url("../img/contact.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image__container h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 50px;
+}
+.image__container p {
+  color: white;
+  font-size: 28px;
+}
 .container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
-  height: 100vh;
-  max-height: 550px;
-  max-width: 1600px;
-  margin: 120px auto 30px;
-}
-
-.login__form {
-  width: 400px;
-  margin-left: 5rem;
-  /* padding: 0 2rem; */
-  border-radius: var(--border-radius);
-  width: 35%;
-}
-.form__title {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  font-family: "Raleway", sans-serif;
-}
-.error {
-  display: none;
-  color: red;
-  margin-bottom: 20px;
-}
-.sign__in {
-  margin-bottom: 1.5rem;
-  text-align: left;
-  font-size: 20px;
-  font-weight: normal;
-}
-.form__text {
-  text-align: center;
-}
-
-.image__container {
-  background-image: url("../img/image 1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100%;
-  width: 40%;
-  margin-right: 3rem;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  justify-content: center;
 }
-
-.form__input {
-  display: block;
+.contact__form {
+  width: 45%;
+  max-width: 450px;
+}
+.form__container {
   width: 100%;
-  padding: 0.75rem 3rem;
-  height: 50px;
-  border-radius: var(--border-radius);
-  outline: none;
-  border: 2.5px solid rgba(0, 0, 0, 0.2);
-  background: rgb(248, 248, 248);
-  transition: background-color 0.2s border-color 0.2s;
-  letter-spacing: 0.05em;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
+  margin-top: 3rem;
 }
-.form__title {
-  font-size: 40px;
+.form__container > .detail {
+  margin-bottom: 1.5rem;
 }
-.input__section {
-  margin-bottom: 2rem;
+.heading {
+  margin-bottom: 1rem;
 }
-.form__input:focus {
-  border-color: var(--interface-color);
-  background: #fff;
-}
-.form__message,
-.email__error,
-.password__error {
-  text-align: center;
-  padding: 0.5rem 0;
-  margin-top: 5px;
-  display: none;
-  color: var(--error-message);
-  background-color: rgba(231, 139, 139, 0.2);
-  border: 1px solid #e5e5e5;
-}
-
-.pas-lock,
-.envelope-icon {
+.detail {
   position: relative;
 }
-.email_check,
-.password_check {
-  color: var(--success-message);
+label {
+  font-weight: 500;
   position: absolute;
-  right: 30px;
-  top: 17px;
-  display: none;
+  top: 0px;
+  left: 20px;
+  font-family: "Raleway";
+  pointer-events: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
-.email_exclamation,
-.password_exclamation {
-  color: var(--error-message);
-  position: absolute;
-  right: 30px;
-  top: 17px;
-  display: none;
+input {
+  height: 35px;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.1rem 2rem;
+  outline: none;
+  border: 2.5px solid rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.05rem;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+textarea {
+  height: 100px;
+  resize: none;
 }
 
-.lock,
-.envelope {
+textarea ~ label {
+  top: 0px;
+}
+.underline {
   position: absolute;
-  left: 20px;
-  top: 17px;
-  /* bottom: 45.83%; */
-  /* font-weight: 100; */
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
 }
-.forgotten__pass {
+input ~ .underline:before,
+input ~ .underline:after,
+textarea ~ .underline:before,
+textarea ~ .underline:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: var(--interface-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+input:focus ~ label,
+textarea:focus ~ label {
+  transform: translateY(-20px);
+  color: var(--interface-color);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  transform: translateY(-20px);
+  color: var(--interface-color);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+input:focus ~ .underline:before,
+.underline:after,
+textarea:focus ~ .underline:before,
+.underline:after,
+input:valid ~ .underline:before,
+.underline:after,
+textarea:valid ~ .underline:before,
+.underline:after {
+  transform: scaleX(1);
+}
+.contact__address {
+  width: 40%;
   display: flex;
-  /* grid-template-columns: 1fr 1fr; */
-  margin-bottom: 2rem;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  font-weight: bold;
 }
-.forgotten__pass #checkbox{
-  width: 15px;
-  height: 15px;
+.contact__details > div > p {
+  margin-left: 30px;
 }
-.other-links {
-  color: #340bec;
-}
-.login__btn {
+.btn {
   width: 100%;
   padding: 0.75rem;
   border-radius: var(--border-radius);
   outline: none;
   border: none;
   background-color: var(--interface-color);
-  box-shadow: 5px 10px 20px rgba(96, 57, 251, 0.4);
+  box-shadow: 3.2px 16px 40px rgba(96, 57, 251, 0.3);
   color: #fff;
-  font-size: 16px;
   cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
+  /* margin-left: 1rem; */
+  transition: background 1s ease;
 }
-.login__btn:hover {
-  background: #270f8a;
-  /* color: var(--interface-color); */
-  transition: background-color 1s;
+.btn:hover {
+  background: #6f4ff1;
 }
-#checkbox {
-  margin-right: 5px;
-  height: 10px;
-  width: 10px;
+.contact__text {
+  margin-left: 20px;
 }
 
-.link__text {
-  margin-top: 2rem;
-  text-align: center;
+.contact__us {
+  margin-bottom: 1rem;
 }
-/* a {
-  text-decoration: underline;
-  color: var(--interface-color);
+.call,
+.mail,
+.location {
+  position: relative;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 }
-a:hover {
-  text-decoration: none;
-} */
+.fa {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #32207c;
+}
+.phone,
+.envelope,
+.marker {
+  position: absolute;
+}
 
 /* FOOTER STYLES */
 
@@ -520,6 +547,7 @@ footer ul.social li i {
 footer ul.social li i:hover {
   padding: 0;
   color: #8396bb;
+  cursor: pointer;
 }
 .pjt-92 {
   background-color: #1a027b;
@@ -552,9 +580,6 @@ footer ul.social li i:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.reset-container p a {
-  color: #4623d2;
 }
 .forgot-password-wrap {
   width: 95%;
@@ -592,10 +617,8 @@ input#reset-btn {
   cursor: pointer;
 }
 input#reset-btn:hover {
-  border: 2px solid white;
-  color: #fff;
-  font-weight: bold;
-  background-color: transparent;
+  color: #4623d2;
+  background-color: #ddd;
 }
 
 /* END OF FORGOT PASSWORD PAGE STYLES */
@@ -633,25 +656,14 @@ input#reset-btn:hover {
 .modal form {
   width: 80%;
 }
-.modal > p {
-  margin-bottom: 30px;
-}
 .modal form input {
   width: 100%;
-  height: 45px;
-  color: white;
-  font-weight: bold;
+  height: 50px;
+  background-color: #4623d2;
+  margin-top: 50px;
   text-transform: uppercase;
   border: 0;
   cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-#logout {
-  background-color: #4623d2;
-}
-#cancel-logout {
-  background-color: red;
 }
 .modal-close {
   position: absolute;
@@ -670,10 +682,6 @@ input#reset-btn:hover {
 .modal-close:hover {
   color: #aaa;
 }
-
-/* END OF MODAL STYLES */
-
-/*  */
 @media screen and (max-width: 1150px) {
   body {
     font-size: 14px;
@@ -691,26 +699,17 @@ input#reset-btn:hover {
   .footer-wrap {
     justify-content: space-between;
   }
-  .login__form {
+
+  .container {
     height: 100%;
-    z-index: 2;
-    padding: 1rem;
-    margin-left: 1rem;
-    width: 50%;
-  }
-  .container,
-  .reset-container {
-    height: 70vh;
     max-height: unset;
+    justify-content: space-around;
   }
-  .login__form,
-  .image__container {
-    max-height: 550px;
-  }
-  .image__container {
-    margin-right: 2rem;
+  .contact__address {
+    width: 45%;
   }
 }
+
 @media screen and (max-width: 760px) {
   header {
     height: 70px;
@@ -751,101 +750,59 @@ input#reset-btn:hover {
     font-size: 14px;
   }
   .container {
+    flex-direction: column-reverse;
+    height: 100%;
+    padding-top: 20px;
+  }
+  input,
+  textarea {
+    background-color: transparent;
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+  .underline {
+    width: 100%;
+  }
+  .heading,
+  .contact__us {
+    font-size: 24px;
+  }
+  .form__container {
+    /* height: 100%; */
+    margin-top: 30px;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 70px 0 0;
-    height: calc(100vh - 90px);
-    max-height: 600px;
-    position: relative;
   }
-  .reset-container {
-    margin: 70px 0 0;
-    height: calc(100vh - 90px);
-    max-height: 600px;
-    position: relative;
+  .contact__details {
+    flex-direction: column;
   }
-  .reset-container h1 {
-    font-size: 24px;
-  }
-  .forgot-password-wrap p {
-    font-size: 14px;
-    width: 95%;
-  }
-  .forgot-password-wrap input {
-    width: 95%;
+  .contact__nav {
+    margin-top: 75px;
   }
   .image__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    max-height: 600px;
-    width: 100vw;
-    opacity: 1;
-    background-position: center;
-    z-index: 1;
+    height: 70vh;
+    max-height: 350px;
   }
-  .login__form {
-    /* margin-top: 3.5rem; */
-    width: 90%;
-    height: 80%;
-    min-height: 420px;
-    max-height: 500px;
-    z-index: 2;
-    background-color: #fff;
-    /* padding: 2rem; */
-    padding: 10px 20px;
-    margin: 0 auto;
-    opacity: 0.9;
-    box-shadow: 3.2px 16px 40px 2px rgba(96, 57, 251, 0.3);
-    /* padding: 0.7rem 3rem; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .image__container h1 {
+    font-size: 30px;
   }
-  .forgotten__pass #checkbox{
-    width: 10px;
-    height: 10px;
+  .image__container p {
+    font-size: 20px;
   }
-  .form__title {
-    font-size: 32px;
+  .contact__form,
+  .contact__address {
+    width: 100%;
+    align-items: flex-start;
+    max-width: unset;
   }
-  .sign__in {
-    font-size: 16px;
-  }
-  .form__input {
-    padding: 0.5rem 3rem;
-    height: 45px;
-  }
-  .form__message,
-  .email__error,
-  .password__error {
-    padding: 0.1rem 0;
-  }
-  .container {
-  }
-  .form__text {
-    margin-top: 1rem;
-    height: 20px;
-  }
-  .forgotten__pass {
-    margin-bottom: 1rem;
-  }
-  .link__text {
-    margin: 0;
-  }
-  .email_check,
-  .password_check {
-    top: 15px;
-  }
-  .email_exclamation,
-  .password_exclamation {
-    top: 15px;
-  }
-
-  .lock,
-  .envelope {
-    top: 15px;
+  .contact__form > h1,
+  .contact__form > p {
+    /* text-align: center; */
   }
 }
